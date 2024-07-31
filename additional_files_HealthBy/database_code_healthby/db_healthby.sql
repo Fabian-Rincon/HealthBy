@@ -119,3 +119,12 @@ create table trabajadores_citas_medicas
 (
 cod_tcm tinyint
 );
+
+create table admins(
+doc_adm int primary key not null,
+nom_adm varchar(50) not null,
+ape_adm varchar(50) not null,
+fec_nac_adm date not null,
+cor_ele_adm varchar(50) not null,
+con_adm varchar(50) not null
+);
