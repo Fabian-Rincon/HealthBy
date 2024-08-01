@@ -39,12 +39,14 @@ create table pacientes
 (
 num_doc_pac varchar(15) primary key not null, 
 nom_pac varchar(50) not null,
+ape_pac varchar(50) not null,
 fec_nac_pac date default null,
 gen_pac varchar(12) default null,
 dir_pac varchar(50) default null,
 tel_pac varchar(20),
-cor_ele_pac varchar(20),
+cor_ele_pac varchar(50),
 fec_afi_pac date not null,
+cont_pac varchar(50) not null,
 his_med_pac text default null
 );
 
@@ -68,9 +70,14 @@ create table trabajadores
 (
 num_doc_tra varchar(15) primary key not null,
 nom_tra varchar(50) not null,
+ape_tra varchar(50) not null,
+fec_nac_tra date default null,
+gen_tra varchar(12) default null,
+dir_tra varchar(50) default null,
 tel_tra varchar(20) default null,
 cor_ele_tra varchar(50) default null,
 fec_vin_tra date not null,
+cont_tra varchar(50) not null,
 fk_cod_sed tinyint,
 fk_cod_cla tinyint,
 foreign key(fk_cod_sed) references sedes(cod_sed),
@@ -117,14 +124,17 @@ foreign key(fk_num_doc_pac) references pacientes(num_doc_pac)
 
 create table trabajadores_citas_medicas
 (
-cod_tcm tinyint
+cod_tcm int primary key not null,
+fk_num_doc_tra varchar(15),
+fk_cod_cit_med int,
+foreign key(fk_num_doc_tra) references trabajadores(num_doc_tra),
+foreign key(fk_cod_cit_med) references citas_medicas(cod_cit_med)
 );
 
 create table admins(
-doc_adm int primary key not null,
+num_doc_adm int primary key not null,
 nom_adm varchar(50) not null,
 ape_adm varchar(50) not null,
-fec_nac_adm date not null,
 cor_ele_adm varchar(50) not null,
-con_adm varchar(50) not null
+cont_adm varchar(50) not null
 );
