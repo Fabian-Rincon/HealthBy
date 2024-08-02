@@ -1,13 +1,15 @@
+// Conexion con la Base de Datos
 let mysql = require("mysql");
 
+// Datos de autentificasion
 let conexion = mysql.createConnection({
     host: "localhost",
-    database: "healthby",
     user: "root",
-    password: ""
+    password: "",
+    database: "healthby"
 });
 
-// Revisor de conexión con la BD
+// Revisa posibles errores en la conexión
 conexion.connect(function(err){
     if(err){
         throw err;
@@ -16,4 +18,5 @@ conexion.connect(function(err){
     }
 })
 
+// Finaliza la conexion
 conexion.end()
