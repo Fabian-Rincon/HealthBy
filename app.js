@@ -1,7 +1,7 @@
-// importamos libreria
+// Importanción libreria
 const express = require("express");
 
-// llamar los metodos de express
+// objetos para llamar los metodos de express
 const app = express();
 
 // configuracion
@@ -11,15 +11,16 @@ app.get("/", function(req,res){
 });
 
 // rutas
-/* mostra en pantalla
+
+/* // Ruta inicial
 app.get("/",function(req,res){
     res.send("<h1> Hola Mundo");
-});
-*/
-// ruta pagina estatica
+}); */
+
+// Middleware
 app.use(express.static("public"));
 
 // configurar puerto para el servidor local
 app.listen(3000,function(){
-    console.log("servidor http://localhost:3000");
+    console.log("Servidor creado exitosamente en http://localhost:3000");
 });
