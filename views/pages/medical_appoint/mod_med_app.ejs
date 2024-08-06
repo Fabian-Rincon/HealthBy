@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>HealthBy - Modificar citas médicas</title>
+	<link rel="icon" href="../../icon/HealthBy Logo.ico" />
+	<link rel="stylesheet" href="../../css/mod_med_app.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fa-solid fa-bars"></i>
+		</label>
+		<a href="../home.ejs" class="ceo">
+			<img class="logohealthby" src="../../icon/HealthBy Logo.ico" alt="HealthBy">
+			<img class="tituhealthby" src="../../img/Tit_HealthBy.png" alt="HealthBy">
+		</a>
+
+		<ul class="men_hor">
+			<li><a href="../home.ejs">Inicio</a></li>
+			<li><a href="#municipios">Municipios <i id="menu" class="fa-solid fa-angle-down"></i></a>
+				<ul class="men_ver">
+					<li><a href="../municipalities/add_municipality.ejs">Añadir</a></li>
+					<li><a href="../municipalities/mod_municipality.ejs">Modificar</a></li>
+				</ul>
+			</li>
+			<li><a href="#sedes">Sedes <i id="menu" class="fa-solid fa-angle-down"></i></a>
+				<ul class="men_ver">
+					<li><a href="../headquarters/add_headquarters.ejs">Añadir</a></li>
+					<li><a href="../headquarters/mod_headquarters.ejs">Modificar</a></li>
+				</ul>
+			</li>
+			<li><a href="#trabajadores">Trabajadores <i id="menu" class="fa-solid fa-angle-down"></i></a>
+				<ul class="men_ver">
+					<li><a href="../workers/add_worker.ejs">Añadir</a></li>
+					<li class="dif_men"><a href="../workers/mod_worker.ejs">Modificar</a></li>
+					<li><a href="../laboral_category_workers/add_lab_cat.ejs">Añd. Cat. Lab.</a></li>
+					<li class="dif_men"><a href="../laboral_category_workers/mod_lab_cat.ejs">Mod. Cat. Lab.</a></li>
+					<li><a href="../specialty_workers/add_spe_work.ejs">Añd. Espec.</a></li>
+					<li><a href="../specialty_workers/mod_spe_work.ejs">Mod. Espec.</a></li>
+				</ul>
+			</li>
+			<li><a href="#pacientes">Pacientes <i id="menu" class="fa-solid fa-angle-down"></i></a>
+				<ul class="men_ver">
+					<li><a href="../patients/add_patient.ejs">Añadir</a></li>
+					<li><a href="../patients/mod_patient.ejs">Modificar</a></li>
+				</ul>
+			</li>
+			<li><a href="#citasmedicas" class="active">Citas Médicas <i id="menu" class="fa-solid fa-angle-down"></i></a>
+				<ul class="men_ver">
+					<li><a href="../medical_appoint/add_med_app.ejs">Añadir</a></li>
+					<li><a class="active" href="../medical_appoint/mod_med_app.ejs">Modificar</a></li>
+				</ul>
+			</li>
+			<li><a class="profile" href="#mi perfil">Mi perfil <i id="menu" class="fa-solid fa-angle-down"></i></a>
+				<ul class="men_ver">
+					<li><a href="../account/edit_data.ejs">Modificar datos</a></li>
+					<li><a href="../account/mod_password.ejs">Cambiar contraseña</a></li>
+				</ul>
+			</li>
+			<li class="animationscl"><a class="signoff" href="../login.ejs">Cerrar sesión</a></li>
+		</ul>
+	</nav>
+
+	<section>
+		<div class="tabla">
+			<table>
+				<tr>
+					<th>Cód. de la Cita Médica</th>
+					<th>Especialista</th>
+					<th>Fecha y Hora de la Cita Médica</th>
+					<th>Motivo de la Cita Médica</th>
+					<th>Nom. del Paciente</th>
+					<th>N° Doc. del Paciente</th>
+					<th>Tel. del Paciente</th>
+					<th>Email del Paciente</th>
+					<!-- <th></th> -->
+			  </tr>
+			  <tr>
+					<td>01785236</td><!-- Cód. de la Cita -->
+					<td>Dr. Alejandro Sánchez</td><!-- Especialista -->
+					<td>29/08/2024 10:00 a.m.</td><!-- Fec. y Hora de la Cita -->
+					<td>Tengo un dolor de migraña severa</td><!-- Mot. de la Cita -->
+					<td>María Castillo</td><!-- Nom. del Paciente -->
+					<td>2468135920</td><!-- N° Doc. del Paciente -->
+					<td>3248998160</td><!-- Tel. del Paciente -->
+					<td>mafe1975@gmail.com</td><!-- Email del Paciente -->
+					<td><a class="modify" title="Editar información" href="edit_med_app.ejs"><i class="fa-regular fa-pen-to-square"></i></a></td>
+			  </tr>
+			  <tr>
+					<td>06547890</td><!-- Cód. de la Cita -->
+					<td>Dra. Laura Rodríguez</td><!-- Especialista -->
+					<td>30/08/2024 12:00 a.m.</td><!-- Fec. y Hora de la Cita -->
+					<td>Presento síntomas de rinitis alérgica desde la semana pasada</td><!-- Mot. de la Cita -->
+					<td>Carlos Gómez</td><!-- Nom. del Paciente -->
+					<td>1357924600</td><!-- N° Doc. del Paciente -->
+					<td>3135152092</td><!-- Tel. del Paciente -->
+					<td>cargomez0303@gmail.com</td><!-- Email del Paciente -->
+					<td><a class="modify" title="Editar información" href="edit_med_app.ejs"><i class="fa-regular fa-pen-to-square"></i></a></td>
+			  </tr>
+			  <tr>
+					<td>07556543</td><!-- Cód. de la Cita -->
+					<td>Dr. Carlos Medina</td><!-- Especialista -->
+					<td>10/09/2024 10:00 a.m.</td><!-- Fec. y Hora de la Cita -->
+					<td>Dolor intenso ubicado en la espalda baja</td><!-- Mot. de la Cita -->
+					<td>María Alejandra</td><!-- Nom. del Paciente -->
+					<td>7955588810</td><!-- N° Doc. del Paciente -->
+					<td>3158080906</td><!-- Tel. del Paciente -->
+					<td>marialejarod@gmail.com</td><!-- Email del Paciente -->
+					<td><a class="modify" title="Editar información" href="edit_med_app.ejs"><i class="fa-regular fa-pen-to-square"></i></a></td>
+			  </tr>
+			  <tr>
+					<td>07556554</td><!-- Cód. de la Cita -->
+					<td>Dr. Carlos Medina</td><!-- Especialista -->
+					<td>10/09/2024 11:00 a.m.</td><!-- Fec. y Hora de la Cita -->
+					<td>Ecografía senos paranasales</td><!-- Mot. de la Cita -->
+					<td>Juan Carlos Pérez</td><!-- Nom. del Paciente -->
+					<td>10038770016</td><!-- N° Doc. del Paciente -->
+					<td>3152228800</td><!-- Tel. del Paciente -->
+					<td>juancaperez@gmail.com</td><!-- Email del Paciente -->
+					<td><a class="modify" title="Editar información" href="edit_med_app.ejs"><i class="fa-regular fa-pen-to-square"></i></a></td>
+			  </tr>
+			</table>
+		</div>
+	</section>
+</body>
+</html>

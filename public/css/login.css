@@ -92,7 +92,7 @@ section div.formulario form div.remember {
 }
 
 /* Login botón */
-section div.formulario form a.loginbtn {
+section div.formulario form input.loginbtn {
     background-color: #0e87fd;
     padding: 17px 10px;
     font-size: 20px;
@@ -103,12 +103,12 @@ section div.formulario form a.loginbtn {
     transition: all .3s;
 }
 
-section div.formulario form a.loginbtn:hover{
+section div.formulario form input.loginbtn:hover{
     background-color: #0e78ff;
     /* scale: 1.03; */
 }
 
-section div.formulario form a.loginbtn:active {
+section div.formulario form input.loginbtn:active {
     transition: scale 0.2s ease;
     scale: 0.97;
 }
@@ -289,7 +289,7 @@ nav ul.men_hor li.animationscl:active {
         padding: 20px 0 20px 0;
     }
 
-    section div.formulario form a.loginbtn {
+    section div.formulario form input.loginbtn {
         padding: 17px 10px;
         font-size: 18px;
     }
@@ -376,7 +376,7 @@ nav ul.men_hor li.animationscl:active {
         padding: 15px 0 15px 0;
     }
 
-    section div.formulario form a.loginbtn {
+    section div.formulario form input.loginbtn {
         font-size: 16px;
         padding: 12px 10px;
     }

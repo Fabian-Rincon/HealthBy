@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthBy - Añadir sede</title>
+    <link rel="icon" href="../../icon/HealthBy Logo.ico" />
+    <link rel="stylesheet" href="../../css/add_headquarters.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <a href="../home.ejs" class="ceo">
+            <img class="logohealthby" src="../../icon/HealthBy Logo.ico" alt="HealthBy">
+            <img class="tituhealthby" src="../../img/Tit_HealthBy.png" alt="HealthBy">
+        </a>
+
+        <ul class="men_hor">
+            <li><a href="../home.ejs">Inicio</a></li>
+            <li><a href="#municipios">Municipios <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../municipalities/add_municipality.ejs">Añadir</a></li>
+                    <li><a href="../municipalities/mod_municipality.ejs">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#sedes" class="active">Sedes <i id="menu"class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a class="active" href="../headquarters/add_headquarters.ejs">Añadir</a></li>
+                    <li><a href="../headquarters/mod_headquarters.ejs">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#trabajadores">Trabajadores <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../workers/add_worker.ejs">Añadir</a></li>
+                    <li class="dif_men"><a href="../workers/mod_worker.ejs">Modificar</a></li>
+                    <li><a href="../laboral_category_workers/add_lab_cat.ejs">Añd. Cat. Lab.</a></li>
+                    <li class="dif_men"><a href="../laboral_category_workers/mod_lab_cat.ejs">Mod. Cat. Lab.</a></li>
+                    <li><a href="../specialty_workers/add_spe_work.ejs">Añd. Espec.</a></li>
+                    <li><a href="../specialty_workers/mod_spe_work.ejs">Mod. Espec.</a></li>
+                </ul>
+            </li>
+            <li><a href="#pacientes">Pacientes <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../patients/add_patient.ejs">Añadir</a></li>
+                    <li><a href="../patients/mod_patient.ejs">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#citasmedicas">Citas Médicas <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../medical_appoint/add_med_app.ejs">Añadir</a></li>
+                    <li><a href="../medical_appoint/mod_med_app.ejs">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a class="profile" href="#mi perfil">Mi perfil <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../account/edit_data.ejs">Modificar datos</a></li>
+                    <li><a href="../account/mod_password.ejs">Cambiar contraseña</a></li>
+                </ul>
+            </li>
+            <li class="animationscl"><a class="signoff" href="../login.ejs">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="formulario">
+            <form action="">
+                <h2>Añadir Sede</h2>
+
+                <!-- Info de la Cita -->
+
+                <label class="labform" for="nom_sed"> Nombre de la sede </label>
+                <input type="text" id="nom_sed">
+
+                <label class="labform" for="cod_sed"> Código de la sede </label>
+                    <input type="number" id="cod_sed">
+
+                <label class="labform" for="dir_sed"> Dirección de la sede </label>
+                    <input type="text" id="dir_sed">
+
+                <label class="labform" for="tel_sed"> Teléfono de la sede </label>
+                    <input type="text" id="tel_sed">
+
+                <label class="labform" for="cor_ele_sed"> Correo electrónico de la sede </label>
+                    <input type="email" id="cor_ele_sed">
+                    <!-- Botón Original -->
+                <!-- <input type="submit" value="Añadir sede" class="add_headquarters"> -->
+
+                    <!-- Botón Remplazo -->
+                <a href="" class="add_headquarters">Añadir sede</a>
+            </form>
+        </div>
+    </section>
+</div>
+</body>
+</html>

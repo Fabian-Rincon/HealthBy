@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthBy - Modificar sede</title>
+    <link rel="icon" href="../../icon/HealthBy Logo.ico" />
+    <link rel="stylesheet" href="../../css/mod_headquarters.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <a href="../home.ejs" class="ceo">
+            <img class="logohealthby" src="../../icon/HealthBy Logo.ico" alt="HealthBy">
+            <img class="tituhealthby" src="../../img/Tit_HealthBy.png" alt="HealthBy">
+        </a>
+
+        <ul class="men_hor">
+            <li><a href="../home.ejs">Inicio</a></li>
+            <li><a href="#municipios">Municipios <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../municipalities/add_municipality.ejs">Añadir</a></li>
+                    <li><a href="../municipalities/mod_municipality.ejs">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#sedes" class="active">Sedes <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../headquarters/add_headquarters.ejs">Añadir</a></li>
+                    <li><a class="active" href="../headquarters/mod_headquarters.ejs">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#trabajadores">Trabajadores <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../workers/add_worker.ejs">Añadir</a></li>
+                    <li class="dif_men"><a href="../workers/mod_worker.ejs">Modificar</a></li>
+                    <li><a href="../laboral_category_workers/add_lab_cat.ejs">Añd. Cat. Lab.</a></li>
+                    <li class="dif_men"><a href="../laboral_category_workers/mod_lab_cat.ejs">Mod. Cat. Lab.</a></li>
+                    <li><a href="../specialty_workers/add_spe_work.ejs">Añd. Espec.</a></li>
+                    <li><a href="../specialty_workers/mod_spe_work.ejs">Mod. Espec.</a></li>
+                </ul>
+            </li>
+            <li><a href="#pacientes">Pacientes <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../patients/add_patient.ejs">Añadir</a></li>
+                    <li><a href="../patients/mod_patient.ejs">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#citasmedicas">Citas Médicas <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../medical_appoint/add_med_app.ejs">Añadir</a></li>
+                    <li><a href="../medical_appoint/mod_med_app.ejs">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a class="profile" href="#mi perfil">Mi perfil <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../account/edit_data.ejs">Modificar datos</a></li>
+                    <li><a href="../account/mod_password.ejs">Cambiar contraseña</a></li>
+                </ul>
+            </li>
+            <li class="animationscl"><a class="signoff" href="../login.ejs">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="tabla">
+            <table>
+                <tr>
+                    <th>Nomb. de la Sede</th>
+                    <th>Cód. de la Sede</th>
+                    <th>Dir. de la Sede</th>
+                    <th>Tel. de la Sede</th>
+                    <th>Cor. Elec. de la Sede</th>
+                    <!-- <th></th> -->
+                </tr>
+                <tr>
+                    <td>Clínica SaludVida</td>  <!-- Nomb. de la Sede -->
+                    <td>S332</td> <!-- Cód. de la Sede -->
+                    <td>Avenida 19 #100-50 - Chía</td> <!-- Dir. de la Sede -->
+                    <td>+57 6 123 4567</td> <!-- Tel. de la Sede -->
+                    <td>contacto@saludvida.com</td> <!-- Cor. Elec. de la Sede -->
+                    <td><a class="modify" title="Editar información" href="edit_headquarters.ejs"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Hospital del Norte</td> <!-- Nomb. de la Sede -->
+                    <td>S128</td> <!-- Cód. de la Sede -->
+                    <td>Calle 80 #12-34 - Fusagasugá</td> <!-- Dir. de la Sede -->
+                    <td>+57 5 765 4321</td> <!-- Tel. de la Sede -->
+                    <td>info@hospitaldelnorte.com</td> <!-- Cor. Elec. de la Sede -->
+                    <td><a class="modify" title="Editar información" href="edit_headquarters.ejs"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Centro Médico La Sabana</td> <!-- Nomb. de la Sede -->
+                    <td>S337</td> <!-- Cód. de la Sede -->
+                    <td>Carrera 23 #45-67 - Ubaté</td> <!-- Dir. de la Sede -->
+                    <td>+57 1 890 1234</td> <!-- Tel. de la Sede -->
+                    <td>citas@centromedicosabana.com</td> <!-- Cor. Elec. de la Sede -->
+                    <td><a class="modify" title="Editar información" href="edit_headquarters.ejs"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Sanatorio El Bosque</td> <!-- Nomb. de la Sede -->
+                    <td>S446</td> <!-- Cód. de la Sede -->
+                    <td>Transversal 5 #30-20 - Zipaquira</td> <!-- Dir. de la Sede -->
+                    <td>+57 5 321 0987</td> <!-- Tel. de la Sede -->
+                    <td>sanatorio@elbosque.com</td> <!-- Cor. Elec. de la Sede -->
+                    <td><a class="modify" title="Editar información" href="edit_headquarters.ejs"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</body>
+</html>

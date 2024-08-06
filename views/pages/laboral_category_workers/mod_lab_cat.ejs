@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthBy - Modificar categoría laboral</title>
+    <link rel="icon" href="../../icon/HealthBy Logo.ico" />
+    <link rel="stylesheet" href="../../css/mod_lab_cat.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <a href="../home.ejs" class="ceo">
+            <img class="logohealthby" src="../../icon/HealthBy Logo.ico" alt="HealthBy">
+            <img class="tituhealthby" src="../../img/Tit_HealthBy.png" alt="HealthBy">
+        </a>
+
+        <ul class="men_hor">
+            <li><a href="../home.ejs">Inicio</a></li>
+            <li><a href="#municipios">Municipios <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../municipalities/add_municipality.ejs">Añadir</a></li>
+                    <li><a href="../municipalities/mod_municipality.ejs">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#sedes">Sedes <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../headquarters/add_headquarters.ejs">Añadir</a></li>
+                    <li><a href="../headquarters/mod_headquarters.ejs">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#trabajadores" class="active">Trabajadores <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../workers/add_worker.ejs">Añadir</a></li>
+                    <li class="dif_men"><a href="../workers/mod_worker.ejs">Modificar</a></li>
+                    <li><a href="add_lab_cat.ejs">Añd. Cat. Lab.</a></li>
+                    <li class="dif_men"><a class="active" href="mod_lab_cat.ejs">Mod. Cat. Lab.</a></li>
+                    <li><a href="../specialty_workers/add_spe_work.ejs">Añd. Espec.</a></li>
+                    <li><a href="../specialty_workers/mod_spe_work.ejs">Mod. Espec.</a></li>
+                </ul>
+            </li>
+            <li><a href="#pacientes">Pacientes <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../patients/add_patient.ejs">Añadir</a></li>
+                    <li><a href="../patients/mod_patient.ejs">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#citasmedicas">Citas Médicas <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../medical_appoint/add_med_app.ejs">Añadir</a></li>
+                    <li><a href="../medical_appoint/mod_med_app.ejs">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a class="profile" href="#mi perfil">Mi perfil <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../account/edit_data.ejs">Modificar datos</a></li>
+                    <li><a href="../account/mod_password.ejs">Cambiar contraseña</a></li>
+                </ul>
+            </li>
+            <li class="animationscl"><a class="signoff" href="../login.ejs">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="tabla">
+            <table>
+                <tr>
+                    <th>Cód. Categoría Laboral</th>
+                    <th>Nom. Categoría Laboral</th>
+                    <th>Desc. Categoría Laboral</th>
+                    <!-- <th></th> -->
+                </tr>
+                <tr>
+                    <td>CL07</td><!-- Cód. Categoría Laboral -->
+                    <td>Nom. Categoría Laboral</td><!-- Nom. Categoría Laboral -->
+                    <td>Desc. Categoría Laboral</td><!-- Desc. Categoría Laboral -->
+                    <td><a class="modify" title="Editar información" href="edit_lab_cat.ejs"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                </tr>
+                <tr>
+                    <td>CL10</td><!-- Cód. Categoría Laboral -->
+                    <td>Nom. Categoría Laboral</td><!-- Nom. Categoría Laboral -->
+                    <td>Desc. Categoría Laboral</td><!-- Desc. Categoría Laboral -->
+                    <td><a class="modify" title="Editar información" href="edit_lab_cat.ejs"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                </tr>
+                <tr>
+                    <td>CL10</td><!-- Cód. Categoría Laboral -->
+                    <td>Nom. Categoría Laboral</td><!-- Nom. Categoría Laboral -->
+                    <td>Desc. Categoría Laboral</td><!-- Desc. Categoría Laboral -->
+                    <td><a class="modify" title="Editar información" href="edit_lab_cat.ejs"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                </tr>
+                <tr>
+                    <td>CL10</td><!-- Cód. Categoría Laboral -->
+                    <td>Nom. Categoría Laboral</td><!-- Nom. Categoría Laboral -->
+                    <td>Desc. Categoría Laboral</td><!-- Desc. Categoría Laboral -->
+                    <td><a class="modify" title="Editar información" href="edit_lab_cat.ejs"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</body>
+</html>

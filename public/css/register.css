@@ -111,7 +111,7 @@ section div.formulario form input#birthdate::-webkit-calendar-picker-indicator:a
 }
 
 /* Register Botón */
-section div.formulario form a.registerbtn {
+section div.formulario form input.registerbtn {
     background-color: #0e87fd;
     padding: 17px 10px;
     font-size: 20px;
@@ -123,11 +123,11 @@ section div.formulario form a.registerbtn {
     margin-top: 20px;
 }
 
-section div.formulario form a.registerbtn:hover{
+section div.formulario form input.registerbtn:hover{
     background-color: #0e78ff;
 }
 
-section div.formulario form a.registerbtn:active {
+section div.formulario form input.registerbtn:active {
     transition: scale 0.2s ease;
     scale: 0.97;
 }
@@ -308,7 +308,7 @@ nav ul.men_hor li.animationscl:active {
         padding: 13.5px 10px;
     }
 
-    section div.formulario form a.registerbtn {
+    section div.formulario form input.registerbtn {
         padding: 17px 10px;
         font-size: 18px;
     }
@@ -394,7 +394,7 @@ nav ul.men_hor li.animationscl:active {
         padding: 7.5px 10px;
     }
 
-    section div.formulario form a.registerbtn {
+    section div.formulario form input.registerbtn {
         font-size: 16px;
         padding: 12px 10px;
     }

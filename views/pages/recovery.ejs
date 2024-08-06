@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>HealthBy - Recupera tu cuenta</title>
+	<link rel="icon" href="../icon/HealthBy Logo.ico" />
+	<link rel="stylesheet" href="../css/recovery.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fa-solid fa-bars"></i>
+		</label>
+		<a href="../index.ejs" class="ceo">
+			<img class="logohealthby" src="../icon/HealthBy Logo.ico" alt="HealthBy">
+			<img class="tituhealthby" src="../img/Tit_HealthBy.png" alt="HealthBy">
+		</a>
+
+		<ul class="men_hor">
+			<li class="animationscl"><a class="login" href="login.ejs">Iniciar sesión</a></li>
+		<li class="animationscl"><a class="signup" href="register.ejs">Registrarse</a></li>
+		</ul>
+	</nav>
+
+	<section>
+		<div class="formulario">
+			<img
+				src="../img/HealthBy_logo.png" class="image" alt="HealthBy" title="HealthBy" />
+
+			<form action="">
+				<h2>Recupera tu cuenta</h2>
+
+				<p>Te enviaremos un enlace para que recuperes el acceso a tú cuenta.</p>
+
+				<label class="labform" for="email"> Correo electrónico </label>
+					<input type="email" name="" id="email" required />
+
+				<!-- Botones Originales -->
+				<!-- <input type="submit" value="Enviar" class="button"> -->
+				<!-- <input type="button" value="Cancelar" href="../index.ejs" class="button"> -->
+
+				<!-- Botones Remplazo -->
+				<a href="../pages/login.ejs" class="send">Enviar</a>
+				<a href="../pages/login.ejs" class="cancel">Cancelar</a>
+			</form>
+		</div>
+	</section>
+</body>
+</html>
