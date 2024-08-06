@@ -88,7 +88,7 @@ section div.formulario form select:focus {
 }
 
 /* Botón añadir municipio - cancelar */
-section div.formulario form a.edit_municipality {
+section div.formulario form input.edit_municipalitybtn {
    background-color: #0e87fd;
    padding: 17px 10px;
    font-size: 20px;
@@ -100,7 +100,7 @@ section div.formulario form a.edit_municipality {
    transition: all .3s;
 }
 
-section div.formulario form a.cancel {
+section div.formulario form a.cancelbtn {
    background-color: #0e87fd;
    padding: 17px 10px;
    font-size: 20px;
@@ -112,14 +112,14 @@ section div.formulario form a.cancel {
    transition: all .3s;
 }
 
-section div.formulario form a.edit_municipality:hover, 
-section div.formulario form a.cancel:hover {
+section div.formulario form input.edit_municipalitybtn:hover, 
+section div.formulario form a.cancelbtn:hover {
    background-color: #0e78ff;
    /* scale: 1.03; */
 }
 
-section div.formulario form a.edit_municipality:active,
-section div.formulario form a.cancel:active {
+section div.formulario form input.edit_municipalitybtn:active,
+section div.formulario form a.cancelbtn:active {
    transition: scale 0.2s ease;
    scale: 0.97;
 }
@@ -404,8 +404,8 @@ nav ul.men_hor li:hover > ul.men_ver {
        padding: 12px 10px;
    }
 
-   section div.formulario form a.edit_municipality,
-   section div.formulario form a.cancel {
+   section div.formulario form input.edit_municipalitybtn,
+   section div.formulario form a.cancelbtn {
        padding: 17px 10px;
        font-size: 18px;
    }
@@ -443,13 +443,13 @@ nav ul.men_hor li:hover > ul.men_ver {
        padding: 9px 10px;
    }
    
-   section div.formulario form a.edit_municipality {
+   section div.formulario form input.edit_municipalitybtn {
        font-size: 16px;
        padding: 12px 10px;
        margin-top: 15px;
    }
 
-   section div.formulario form a.cancel {
+   section div.formulario form a.cancelbtn {
        font-size: 16px;
        padding: 12px 10px;
        margin-top: 5px;

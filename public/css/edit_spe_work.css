@@ -98,7 +98,7 @@ section div.formulario form textarea#des_cla:focus {
 }
 
 /* Botón añadir categoria laboral */
-section div.formulario form a.edit_spe_work {
+section div.formulario form input.edit_spe_workbtn {
    background-color: #0e87fd;
    padding: 17px 10px;
    font-size: 20px;
@@ -110,7 +110,7 @@ section div.formulario form a.edit_spe_work {
    transition: all .3s;
 }
 
-section div.formulario form a.cancel {
+section div.formulario form a.cancelbtn {
    background-color: #0e87fd;
    padding: 17px 10px;
    font-size: 20px;
@@ -122,13 +122,13 @@ section div.formulario form a.cancel {
    transition: all .3s;
 }
 
-section div.formulario form a.edit_spe_work:hover,
-section div.formulario form a.cancel:hover {
+section div.formulario form input.edit_spe_workbtn:hover,
+section div.formulario form a.cancelbtn:hover {
    background-color: #0e78ff;
 }
 
-section div.formulario form a.edit_spe_work:active,
-section div.formulario form a.cancel:active {
+section div.formulario form input.edit_spe_workbtn:active,
+section div.formulario form a.cancelbtn:active {
    transition: scale 0.2s ease;
    scale: 0.97;
 }
@@ -416,8 +416,8 @@ nav ul.men_hor li:hover > ul.men_ver {
        padding: 10px 10px;
    }
 
-   section div.formulario form a.edit_spe_work,
-   section div.formulario form a.cancel {
+   section div.formulario form input.edit_spe_workbtn,
+   section div.formulario form a.cancelbtn {
        padding: 17px 10px;
        font-size: 18px;
    }
@@ -458,13 +458,13 @@ nav ul.men_hor li:hover > ul.men_ver {
        padding: 10px 10px;
    }
    
-   section div.formulario form a.edit_spe_work {
+   section div.formulario form input.edit_spe_workbtn {
        font-size: 16px;
        padding: 12px 10px;
        margin-top: 15px;
    }
 
-   section div.formulario form a.cancel {
+   section div.formulario form a.cancelbtn {
        font-size: 16px;
        padding: 12px 10px;
        margin-top: 5px;

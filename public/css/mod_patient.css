@@ -86,7 +86,7 @@ section div.tabla table tr td:last-child:active {
     scale: 0.93;
 }
 
-section div.tabla table tr td a.modify {
+section div.tabla table tr td a.modifybtn {
     font-size: 16px;
     color: white;
     background-color: #0e87fd;
@@ -95,7 +95,7 @@ section div.tabla table tr td a.modify {
     transition: all .3s;
 }
 
-section div.tabla table tr td a.modify:hover {
+section div.tabla table tr td a.modifybtn:hover {
     background-color: #FF787D;
 }
 
@@ -363,7 +363,7 @@ nav ul.men_hor li:hover > ul.men_ver {
         font-size: 13px;
     }
 
-    section div.tabla table tr td a.modify {
+    section div.tabla table tr td a.modifybtn {
         font-size: 14px;
     }
 }
@@ -386,7 +386,7 @@ nav ul.men_hor li:hover > ul.men_ver {
         font-size: 12px;
     }
 
-    section div.tabla table tr td a.modify {
+    section div.tabla table tr td a.modifybtn {
         font-size: 11px;
     }
 }

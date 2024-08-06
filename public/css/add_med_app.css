@@ -137,7 +137,7 @@ section div.formulario form textarea#mot_cit_med:focus {
 }
 
 /* Botón agendar cita medica */
-section div.formulario form a.add_med_app {
+section div.formulario form input.add_med_appbtn {
     background-color: #0e87fd;
     padding: 17px 10px;
     font-size: 20px;
@@ -149,11 +149,11 @@ section div.formulario form a.add_med_app {
     transition: all .3s;
 }
 
-section div.formulario form a.add_med_app:hover {
+section div.formulario form input.add_med_appbtn:hover {
     background-color: #0e78ff;
 }
 
-section div.formulario form a.add_med_app:active {
+section div.formulario form input.add_med_appbtn:active {
     transition: scale 0.2s ease;
     scale: 0.97;
 }
@@ -455,7 +455,7 @@ nav ul.men_hor li:hover > ul.men_ver {
         padding: 12px 10px;
     }
 
-    section div.formulario form a.add_med_app {
+    section div.formulario form input.add_med_appbtn {
         font-size: 18px;
         padding: 17px 10px;
     }
@@ -505,7 +505,7 @@ nav ul.men_hor li:hover > ul.men_ver {
         padding: 9px 10px;
     }
     
-    section div.formulario form a.add_med_app {
+    section div.formulario form input.add_med_appbtn {
         font-size: 16px;
         padding: 12px 10px;
         margin-top: 15px;
