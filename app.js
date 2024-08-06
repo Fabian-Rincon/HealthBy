@@ -28,13 +28,22 @@ app.get('/pages/recovery', function(req, res){
 app.get('/pages/register', function(req, res){
     res.render('pages/register');
 });
-// rutas
-/* mostra en pantalla
+
+/* 
+rutas ejemplos
+
+mostra en pantalla, ruta de prueba
 app.get("/",function(req,res){
     res.send("<h1> Hola Mundo");
 });
+
+main page
+app.get('/pages/main', function(req, res){
+    res.render('pages/main');
+});
 */
-// ruta pagina estatica
+
+// middleware
 app.use(express.static("public"));
 
 // configurar puerto para el servidor local
