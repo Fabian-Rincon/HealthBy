@@ -1,36 +1,25 @@
 // importamos libreria
-const express = require("express");
+const express = require('express');
 
 // llamar los metodos de express
 const app = express();
 
 // motor de visualizacion ejs
-app.set("view engine","ejs");
+app.set('view engine','ejs');
 
-// res.render para cargar archivos ejs 
-// index page
-app.get("/", function(req,res){
-    res.render("index");
-});
-// home page
-app.get('/pages/home', function(req, res){
-    res.render('pages/home');
-});
-// login page
-app.get('/pages/login', function(req, res){
-    res.render('pages/login');
-});
+// llamada al archivo router
+app.use('/', require('./router'));
 
-// rutas
-/* mostra en pantalla
-app.get("/",function(req,res){
-    res.send("<h1> Hola Mundo");
-});
-*/
-// ruta pagina estatica
-app.use(express.static("public"));
+// ejemplos de ruta cuando solo se usa el archivo app.js
+// mostra en pantalla hola mundo, ruta de prueba
+// app.get('/', (req,res)=>{
+//     res.send('<h1> Hola Mundo');
+// });
+
+// middleware, para conectar los estilos en la carpeta public
+app.use(express.static('public'));
 
 // configurar puerto para el servidor local
-app.listen(3000,function(){
-    console.log("servidor http://localhost:3000");
+app.listen(3000, ()=>{
+    console.log('servidor http://localhost:3000');
 });
