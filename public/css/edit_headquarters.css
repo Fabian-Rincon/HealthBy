@@ -74,7 +74,7 @@ section div.formulario form input:focus {
 }
 
 /* Botón añadir sede */
-section div.formulario form a.edit_headquarters {
+section div.formulario form input.edit_headquartersbtn {
    background-color: #0e87fd;
    padding: 17px 10px;
    font-size: 20px;
@@ -86,7 +86,7 @@ section div.formulario form a.edit_headquarters {
    transition: all .3s;
 }
 
-section div.formulario form a.cancel {
+section div.formulario form a.cancelbtn {
    background-color: #0e87fd;
    padding: 17px 10px;
    font-size: 20px;
@@ -98,13 +98,13 @@ section div.formulario form a.cancel {
    transition: all .3s;
 }
 
-section div.formulario form a.edit_headquarters:hover, 
-section div.formulario form a.cancel:hover {
+section div.formulario form input.edit_headquartersbtn:hover, 
+section div.formulario form a.cancelbtn:hover {
    background-color: #0e78ff;
 }
 
-section div.formulario form a.edit_headquarters:active,
-section div.formulario form a.cancel:active {
+section div.formulario form input.edit_headquartersbtn:active,
+section div.formulario form a.cancelbtn:active {
    transition: scale 0.2s ease;
    scale: 0.97;
 }
@@ -389,8 +389,8 @@ nav ul.men_hor li:hover > ul.men_ver {
        padding: 13px 10px;
    }
 
-   section div.formulario form a.edit_headquarters,
-   section div.formulario form a.cancel {
+   section div.formulario form input.edit_headquartersbtn,
+   section div.formulario form a.cancelbtn {
        padding: 17px 10px;
        font-size: 18px;
    }
@@ -423,13 +423,13 @@ nav ul.men_hor li:hover > ul.men_ver {
        padding: 10px 10px;
    }
    
-   section div.formulario form a.edit_headquarters {
+   section div.formulario form input.edit_headquartersbtn {
       font-size: 16px;
       padding: 12px 10px;
       margin-top: 15px;
    }
 
-   section div.formulario form a.cancel {
+   section div.formulario form a.cancelbtn {
       font-size: 16px;
       padding: 12px 10px;
       margin-top: 5px;

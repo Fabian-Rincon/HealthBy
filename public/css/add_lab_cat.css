@@ -98,7 +98,7 @@ section div.formulario form textarea#des_cla:focus {
 }
 
 /* Botón añadir categoria laboral */
-section div.formulario form a.add_lab_cat {
+section div.formulario form input.add_lab_catbtn {
     background-color: #0e87fd;
     padding: 17px 10px;
     font-size: 20px;
@@ -110,11 +110,11 @@ section div.formulario form a.add_lab_cat {
     transition: all .3s;
 }
 
-section div.formulario form a.add_lab_cat:hover {
+section div.formulario form input.add_lab_catbtn:hover {
     background-color: #0e78ff;
 }
 
-section div.formulario form a.add_lab_cat:active {
+section div.formulario form input.add_lab_catbtn:active {
     transition: scale 0.2s ease;
     scale: 0.97;
 }
@@ -406,7 +406,7 @@ nav ul.men_hor li:hover > ul.men_ver {
         padding: 10px 10px;
     }
 
-    section div.formulario form a.add_lab_cat {
+    section div.formulario form input.add_lab_catbtn {
         padding: 17px 10px;
         font-size: 18px;
     }
@@ -447,7 +447,7 @@ nav ul.men_hor li:hover > ul.men_ver {
         padding: 10px 10px;
     }
     
-    section div.formulario form a.add_lab_cat {
+    section div.formulario form input.add_lab_catbtn {
         font-size: 16px;
         padding: 12px 10px;
         margin-top: 15px;
