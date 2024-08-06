@@ -20,7 +20,14 @@ app.get('/pages/home', function(req, res){
 app.get('/pages/login', function(req, res){
     res.render('pages/login');
 });
-
+// recovery page
+app.get('/pages/recovery', function(req, res){
+    res.render('pages/recovery');
+});
+// register page
+app.get('/pages/register', function(req, res){
+    res.render('pages/register');
+});
 // rutas
 /* mostra en pantalla
 app.get("/",function(req,res){
