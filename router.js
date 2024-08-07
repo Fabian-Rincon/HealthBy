@@ -42,10 +42,10 @@ router.get('/pages/headquarters/mod_headquarters', (req, res)=>{
 });
 
 router.get('/pages/laboral_category_workers/add_lab_cat', (req, res)=>{
-    res.render('/pages/laboral_category_workers/add_lab_cat');
+    res.render('pages/laboral_category_workers/add_lab_cat');
 });
 router.get('/pages/laboral_category_workers/edit_lab_cat', (req, res)=>{
-    res.render('/pages/laboral_category_workers/edit_lab_cat');
+    res.render('pages/laboral_category_workers/edit_lab_cat');
 });
 router.get('/pages/laboral_category_workers/mod_lab_cat', (req, res)=>{
     res.render('pages/laboral_category_workers/mod_lab_cat');
