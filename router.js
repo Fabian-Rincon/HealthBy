@@ -70,8 +70,15 @@ router.get('/pages/municipalities/edit_municipality', (req, res)=>{
     res.render('pages/municipalities/edit_municipality');
 });
 router.get('/pages/municipalities/mod_municipality', (req, res)=>{
-    res.render('pages/municipalities/mod_municipality');
+    conexion.query('SELECT * FROM municipios', (error, results)=>{
+        if(error){
+            throw error;
+        }else{
+            res.render('pages/municipalities/mod_municipality', {results:results});
+        }
+    });
 });
+
 
 router.get('/pages/patients/add_patient', (req, res)=>{
     res.render('pages/patients/add_patient');
