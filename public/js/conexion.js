@@ -113,9 +113,6 @@ conexion.query(PACIENTES,function(error,registros){
 
 /* --------------------------------------------------------------------------- */
 
-// Finalizador de Conexión
-conexion.end()
-
 /*
 // Obtener información en formatos desde los formularios
 app.use(express.json());
@@ -155,3 +152,6 @@ app.post("/validar", function(req,res){
     // console.log(datos)
 })
 */
+
+// Finalizador de Conexión
+conexion.end()

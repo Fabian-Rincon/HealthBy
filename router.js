@@ -2,6 +2,8 @@
 const express = require('express');
 const router = express.Router();
 
+const conexion = require("./database/db")
+
 // res.render para cargar archivos ejs 
 // index page
 router.get('/', (req,res)=>{
@@ -29,5 +31,5 @@ router.get('/pages/register', (req, res)=>{
 //     res.render('pages/main');
 // });
 
-// exporta para poder usar router
+// Exportando router para utilizarlo en otros lugares
 module.exports = router;

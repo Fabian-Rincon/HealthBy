@@ -21,5 +21,5 @@ app.use(express.static('public'));
 
 // configurar puerto para el servidor local
 app.listen(3000, ()=>{
-    console.log('servidor http://localhost:3000');
+    console.log('Servidor creado exitosamente en http://localhost:3000');
 });
