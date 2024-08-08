@@ -14,22 +14,23 @@ body {
 
 /* Contenido */
 section {
-    height: 1130px;
+    /* height: 690px; */
     /* height: 100vh; */
-    /* height: calc(100vh - 65px); */
+    height: auto;
     width: 100%;
     border-radius: 15px;
-    margin-top: 5px;
     background-color: #f0f2f5;
 }
 
 section div.formulario {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     border-radius: 15px;
     height: 100%;
     width: 100%;
+    margin-top: 100px;
+    margin-bottom: 35px;
     /* background-color: #f0f2f5; */
 }
 
@@ -141,13 +142,17 @@ section div.formulario form input.add_patientbtn:active {
 /* Nav bar */
 nav {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
+    font-optical-sizing: auto;
     font-style: normal;
     background-color: #ffffff;
+    position: fixed;
     height: 60px;
     width: 100%;
+    top: 0;
     border-radius: 0 0 15px 15px;
+    box-shadow: 0 0 20px #0e17223d;
+    z-index: 1000;
 }
 
 /* CEO */

@@ -14,23 +14,24 @@ body {
 
 /* Contenido */
 section {
-   /* height: 1020px; */
-   /* height: 100vh; */
-   height: calc(100vh - 65px);
-   width: 100%;
-   border-radius: 15px;
-   margin-top: 5px;
-   background-color: #f0f2f5;
+    /* height: 690px; */
+    /* height: 100vh; */
+    height: auto;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #f0f2f5;
 }
 
 section div.tabla {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-radius: 15px;
-   height: 100%;
-   width: 100%;
-   /* background-color: #f0f2f5; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 35px;
+    /* background-color: #f0f2f5; */
 }
 
 /* Tabla */
@@ -74,38 +75,62 @@ section div.tabla table tr td {
    transition: all .3s;
 }
 
-section div.tabla table tr td:hover:not(:last-child) {
-   background-color: #f0f2f5;
+section div.tabla table tr td.td_btns {
+    width: 80px;
 }
 
-section div.tabla table tr td:last-child:active {
-   transition: scale .2s ease;
-   scale: 0.93;
+section div.tabla table tr td:hover:not(:last-child) {
+    background-color: #f0f2f5;
+}
+
+section div.tabla table tr td a:active {
+    transition: scale .2s ease;
+    scale: 0.93;
+}
+
+section div.tabla table tr td a.modifybtn,
+section div.tabla table tr td a.deletebtn {
+    display: inline-block;
+    height: 26px;
+    width: 26px;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 2px 0px;
+    transition: all .3s;
 }
 
 section div.tabla table tr td a.modifybtn {
-   font-size: 16px;
-   color: white;
-   background-color: #0e87fd;
-   border-radius: 5px;
-   padding: 5px;
-   transition: all .3s;
+    background-color: #0e87fd;
 }
 
 section div.tabla table tr td a.modifybtn:hover {
-   background-color: #FF787D;
+    background-color: #0e5afd;
+}
+
+section div.tabla table tr td a.deletebtn {
+    background-color: #FF787D;
+}
+
+section div.tabla table tr td a.deletebtn:hover {
+    background-color: #ff3d43;
 }
 
 /* Nav bar */
 nav {
-   font-family: "Montserrat", sans-serif;
-   font-weight: 500;
-   font-optical-sizing: auto;
-   font-style: normal;
-   background-color: #ffffff;
-   height: 60px;
-   width: 100%;
-   border-radius: 0 0 15px 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #ffffff;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 0 20px #0e17223d;
+    z-index: 1000;
 }
 
 /* CEO */
@@ -361,42 +386,56 @@ nav ul.men_hor li:hover > ul.men_ver {
        font-size: 13px;
    }
 
-   section div.tabla table tr td a.modifybtn {
-       font-size: 14px;
-   }
+   section div.tabla table tr td.td_btns {
+    width: 70px;
+}
+
+section div.tabla table tr td a.modifybtn,
+section div.tabla table tr td a.deletebtn {
+    height: 23px;
+    width: 23px;
+    font-size: 14px;
+}
 }
 
 @media (max-width: 670px) {
 
-   section div.tabla {
-       justify-content: flex-start;
-       scrollbar-width: thin;
-       overflow-x: auto;
-   }
-   
-   /* Tabla */
-   section div.tabla table {
-       /* height: 505px; */
-       /* width: 300px; */
-       /* margin-top: 17px; */
-       min-width: 570px;
-       padding: 30px;    
-       margin: 10px 30px 0 30px ;
-       /* margin-top: 0; */
-   }
+    section div.tabla {
+        justify-content: flex-start;
+        scrollbar-width: thin;
+        overflow-x: auto;
+    }
 
-   section div.tabla table tr th {
-       font-size: 13px;
+    /* Tabla */
+    section div.tabla table {
+        /* height: 505px; */
+        /* width: 300px; */
+        /* margin-top: 17px; */
+        min-width: 570px;
+        padding: 30px;    
+        margin: 10px 30px 0 30px ;
+        /* margin-top: 0; */
+    }
 
-   }
+    section div.tabla table tr th {
+        font-size: 13px;
 
-   section div.tabla table tr td {
-       font-size: 12px;
-   }
+    }
 
-   section div.tabla table tr td a.modifybtn {
-       font-size: 11px;
-   }
+    section div.tabla table tr td {
+        font-size: 12px;
+    }
+
+    section div.tabla table tr td.td_btns {
+        width: 65px;
+    }
+
+    section div.tabla table tr td a.modifybtn,
+    section div.tabla table tr td a.deletebtn {
+        height: 21px;
+        width: 21px;
+        font-size: 11px;
+    }
 }
 
 @media (max-width: 300px) {
