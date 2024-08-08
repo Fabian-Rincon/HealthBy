@@ -63,12 +63,22 @@ router.get('/pages/medical_appoint/mod_med_app', (req, res)=>{
     res.render('pages/medical_appoint/mod_med_app');
 });
 
+// ruta para agregar 
 router.get('/pages/municipalities/add_municipality', (req, res)=>{
     res.render('pages/municipalities/add_municipality');
 });
-router.get('/pages/municipalities/edit_municipality', (req, res)=>{
-    res.render('pages/municipalities/edit_municipality');
+// ruta para editar 
+router.get('/pages/municipalities/edit_municipality:cod_mun', (req, res)=>{
+    const cod_mun = req.params.cod_mun;
+    conexion.query('SELECT * FROM municipios WHERE cod_mun = ?',[cod_mun], (error, results)=>{
+        if(error){
+            throw error;
+        }else{
+            res.render('pages/municipalities/edit_municipality', {municipio:results[0]});
+        }
+    })
 });
+// ruta para mostrar 
 router.get('/pages/municipalities/mod_municipality', (req, res)=>{
     conexion.query('SELECT * FROM municipios', (error, results)=>{
         if(error){
@@ -78,7 +88,17 @@ router.get('/pages/municipalities/mod_municipality', (req, res)=>{
         }
     });
 });
-
+// ruta para eliminar
+router.get('/pages/municipalities/delete_municipality:cod_mun', (req, res)=>{
+    const cod_mun = req.params.cod_mun;
+    conexion.query('DELETE FROM municipios WHERE cod_mun = ?',[cod_mun], (error, results)=>{
+        if(error){
+            throw error;
+        }else{
+            res.redirect('mod_municipality');
+        }
+    })
+})
 
 router.get('/pages/patients/add_patient', (req, res)=>{
     res.render('pages/patients/add_patient');
@@ -109,6 +129,11 @@ router.get('/pages/workers/edit_worker', (req, res)=>{
 router.get('/pages/workers/mod_worker', (req, res)=>{
     res.render('pages/workers/mod_worker');
 });
+
+// controladores del crud
+const crud = require('./controllers/crud');
+router.post('/save_municipios', crud.save_municipios);
+router.post('/update_municipios', crud.update_municipios);
 
 // Exportando router para utilizarlo en otros lugares
 module.exports = router;

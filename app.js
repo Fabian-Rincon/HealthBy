@@ -7,8 +7,9 @@ const app = express();
 // motor de visualizacion ejs
 app.set('view engine','ejs');
 
-// app.use(express.urlencoded({extended:false}));
-// app.use(express(json));
+// captura datos de formularios
+app.use(express.urlencoded({extended:false}));
+app.use(express(JSON));
 
 // llamada al archivo router
 app.use('/', require('./router'));

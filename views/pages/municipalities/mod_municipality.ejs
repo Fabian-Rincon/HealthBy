@@ -88,11 +88,12 @@
                         <td><%= municipios.num_afi_mun %></td>
                         <td><%= municipios.fk_nom_dep %></td>
                         <td class="td_btns">
-                            <a class="modifybtn" title="Editar información" href="edit_municipality"><i class="fa-regular fa-pen-to-square"></i></a>
-                            <a class="deletebtn" title="Eliminar información" href="delete_municipality"><i class="fa-solid fa-trash"></i></a>
+                            <a class="modifybtn" title="Editar información" href="edit_municipality<%= municipios.cod_mun %>"><i class="fa-regular fa-pen-to-square"></i></a>
+                            <a class="deletebtn" title="Eliminar información" href="delete_municipality<%= municipios.cod_mun %>"><i class="fa-solid fa-trash"></i></a>
                         </td>
                     </tr>
                     <% }); %>
+                </tbody>
             </table>
         </div>
     </section>
