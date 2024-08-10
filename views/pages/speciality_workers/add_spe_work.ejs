@@ -70,22 +70,22 @@
 
     <section>
         <div class="formulario">
-            <form action="">
+            <form action="/save_especialidad" method="post">
                 <h2>Añadir especialidad</h2>
 
-                <!-- Info de la Cita -->
+                <!-- Info de la especialidad  -->
 
-                <label class="labform" for="cod_cla"> Código de la especialidad </label>
-                    <input type="text" id="cod_cla" value="CL02" readonly> <!-- Number or text -->
+                <label class="labform" for="cod_esp"> Código de la especialidad </label>
+                    <input type="number" id="cod_esp" name="cod_esp" readonly> <!-- Number or text -->
 
-                <label class="labform" for="nom_cla">Nombre de la especialidad</label>
-                    <input type="text" id="nom_cla">
+                <label class="labform" for="nom_esp">Nombre de la especialidad</label>
+                    <input type="text" id="nom_esp" name="nom_esp">
 
-                <label class="labform" for="des_cla">Descripción de la especialidad</label>
-                    <textarea name="" id="des_cla"></textarea>
+                <label class="labform" for="des_esp">Descripción de la especialidad</label>
+                    <textarea id="des_esp" name="des_esp"></textarea>
                     
                     <!-- Botón Original -->
-                <input type="submit" value="Añadir especialidad" class="add_spe_workbtn" formaction="">
+                <input type="submit" value="Añadir especialidad" class="add_spe_workbtn">
 
                     <!-- Botón Remplazo -->
                 <!-- <a href="" class="add_spe_work">Añadir especialidad</a> -->

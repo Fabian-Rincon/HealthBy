@@ -71,48 +71,27 @@
     <section>
         <div class="tabla">
             <table>
-                <tr>
-                    <th>Cód. Especialidad</th>
-                    <th>Nom. Especialidad</th>
-                    <th>Desc. Especialidad</th>
-                    <!-- <th></th> -->
-                </tr>
-                <tr>
-                    <td>ET07</td><!-- Cód. Especialidad -->
-                    <td>Nom. Especialidad</td><!-- Nom. Especialidad -->
-                    <td>Desc. Especialidad</td><!-- Desc. Especialidad -->
-                    <td class="td_btns">
-                        <a class="modifybtn" title="Editar información" href="edit_spe_work"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="deletebtn" title="Eliminar información" href="delete_spe_work"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>ET10</td><!-- Cód. Especialidad -->
-                    <td>Nom. Especialidad</td><!-- Nom. Especialidad -->
-                    <td>Desc. Especialidad</td><!-- Desc. Especialidad -->
-                    <td class="td_btns">
-                        <a class="modifybtn" title="Editar información" href="edit_spe_work"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="deletebtn" title="Eliminar información" href="delete_spe_work"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>ET10</td><!-- Cód. Especialidad -->
-                    <td>Nom. Especialidad</td><!-- Nom. Especialidad -->
-                    <td>Desc. Especialidad</td><!-- Desc. Especialidad -->
-                    <td class="td_btns">
-                        <a class="modifybtn" title="Editar información" href="edit_spe_work"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="deletebtn" title="Eliminar información" href="delete_spe_work"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>ET10</td><!-- Cód. Especialidad -->
-                    <td>Nom. Especialidad</td><!-- Nom. Especialidad -->
-                    <td>Desc. Especialidad</td><!-- Desc. Especialidad -->
-                    <td class="td_btns">
-                        <a class="modifybtn" title="Editar información" href="edit_spe_work"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="deletebtn" title="Eliminar información" href="delete_spe_work"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Cód. Especialidad</th>
+                        <th>Nom. Especialidad</th>
+                        <th>Desc. Especialidad</th>
+                        <!-- <th></th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <% results.forEach((especialidad)=> { %>
+                        <tr>
+                            <td><%= especialidad.cod_esp %></td><!-- Cód. Especialidad -->
+                            <td><%= especialidad.nom_esp %></td><!-- Nom. Especialidad -->
+                            <td><%= especialidad.des_esp %></td><!-- Desc. Especialidad -->
+                            <td class="td_btns">
+                                <a class="modifybtn" title="Editar información" href="edit_spe_work"><i class="fa-regular fa-pen-to-square"></i></a>
+                                <a class="deletebtn" title="Eliminar información" href="delete_spe_work"><i class="fa-solid fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
             </table>
         </div>
     </section>

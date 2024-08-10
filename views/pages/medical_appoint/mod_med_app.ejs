@@ -42,8 +42,8 @@
                     <li class="dif_men"><a href="../workers/mod_worker">Modificar</a></li>
                     <li><a href="../laboral_category_workers/add_lab_cat">Añd. Cat. Lab.</a></li>
                     <li class="dif_men"><a href="../laboral_category_workers/mod_lab_cat">Mod. Cat. Lab.</a></li>
-                    <li><a href="../specialty_workers/add_spe_work">Añd. Espec.</a></li>
-                    <li><a href="../specialty_workers/mod_spe_work">Mod. Espec.</a></li>
+                    <li><a href="../speciality_workers/add_spe_work">Añd. Espec.</a></li>
+                    <li><a href="../speciality_workers/mod_spe_work">Mod. Espec.</a></li>
                 </ul>
             </li>
             <li><a href="#pacientes">Pacientes <i id="menu" class="fa-solid fa-angle-down"></i></a>
@@ -71,73 +71,37 @@
     <section>
         <div class="tabla">
             <table>
-                <tr>
-                    <th>Cód. de la Cita Médica</th>
-                    <th>Especialista</th>
-                    <th>Fecha y Hora de la Cita Médica</th>
-                    <th>Motivo de la Cita Médica</th>
-                    <th>Nom. del Paciente</th>
-                    <th>N° Doc. del Paciente</th>
-                    <th>Tel. del Paciente</th>
-                    <th>Email del Paciente</th>
-                    <!-- <th></th> -->
-                </tr>
-                <tr>
-                    <td>01785236</td><!-- Cód. de la Cita -->
-                    <td>Dr. Alejandro Sánchez</td><!-- Especialista -->
-                    <td>29/08/2024 10:00 a.m.</td><!-- Fec. y Hora de la Cita -->
-                    <td>Tengo un dolor de migraña severa</td><!-- Mot. de la Cita -->
-                    <td>María Castillo</td><!-- Nom. del Paciente -->
-                    <td>2468135920</td><!-- N° Doc. del Paciente -->
-                    <td>3248998160</td><!-- Tel. del Paciente -->
-                    <td>mafe1975@gmail.com</td><!-- Email del Paciente -->
-                    <td class="td_btns">
-                        <a class="modifybtn" title="Editar información" href="edit_med_app"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="deletebtn" title="Eliminar información" href="delete_med_app"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>06547890</td><!-- Cód. de la Cita -->
-                    <td>Dra. Laura Rodríguez</td><!-- Especialista -->
-                    <td>30/08/2024 12:00 a.m.</td><!-- Fec. y Hora de la Cita -->
-                    <td>Presento síntomas de rinitis alérgica desde la semana pasada</td><!-- Mot. de la Cita -->
-                    <td>Carlos Gómez</td><!-- Nom. del Paciente -->
-                    <td>1357924600</td><!-- N° Doc. del Paciente -->
-                    <td>3135152092</td><!-- Tel. del Paciente -->
-                    <td>cargomez0303@gmail.com</td><!-- Email del Paciente -->
-                    <td class="td_btns">
-                        <a class="modifybtn" title="Editar información" href="edit_med_app"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="deletebtn" title="Eliminar información" href="delete_med_app"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>07556543</td><!-- Cód. de la Cita -->
-                    <td>Dr. Carlos Medina</td><!-- Especialista -->
-                    <td>10/09/2024 10:00 a.m.</td><!-- Fec. y Hora de la Cita -->
-                    <td>Dolor intenso ubicado en la espalda baja</td><!-- Mot. de la Cita -->
-                    <td>María Alejandra</td><!-- Nom. del Paciente -->
-                    <td>7955588810</td><!-- N° Doc. del Paciente -->
-                    <td>3158080906</td><!-- Tel. del Paciente -->
-                    <td>marialejarod@gmail.com</td><!-- Email del Paciente -->
-                    <td class="td_btns">
-                        <a class="modifybtn" title="Editar información" href="edit_med_app"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="deletebtn" title="Eliminar información" href="delete_med_app"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>07556554</td><!-- Cód. de la Cita -->
-                    <td>Dr. Carlos Medina</td><!-- Especialista -->
-                    <td>10/09/2024 11:00 a.m.</td><!-- Fec. y Hora de la Cita -->
-                    <td>Ecografía senos paranasales</td><!-- Mot. de la Cita -->
-                    <td>Juan Carlos Pérez</td><!-- Nom. del Paciente -->
-                    <td>10038770016</td><!-- N° Doc. del Paciente -->
-                    <td>3152228800</td><!-- Tel. del Paciente -->
-                    <td>juancaperez@gmail.com</td><!-- Email del Paciente -->
-                    <td class="td_btns">
-                        <a class="modifybtn" title="Editar información" href="edit_med_app"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="deletebtn" title="Eliminar información" href="delete_med_app"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Cód. de la Cita Médica</th>
+                        <th>Especialista</th>
+                        <th>Fecha y Hora de la Cita Médica</th>
+                        <th>Motivo de la Cita Médica</th>
+                        <th>Nom. del Paciente</th>
+                        <th>N° Doc. del Paciente</th>
+                        <th>Tel. del Paciente</th>
+                        <th>Email del Paciente</th>
+                        <!-- <th></th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <% results.forEach((citas_medicas)=> { %>
+                        <tr>
+                            <td><%= citas_medicas.cod_cit_med %></td><!-- Cód. de la Cita -->
+                            <td><%= citas_medicas.esp_cit_med %></td><!-- Especialista -->
+                            <td><%= citas_medicas.fyh_cit_med %></td><!-- Fec. y Hora de la Cita -->
+                            <td><%= citas_medicas.mot_cit_med %></td><!-- Mot. de la Cita -->
+                            <td><%= citas_medicas.nom_pac_cit_med %></td><!-- Nom. del Paciente -->
+                            <td><%= citas_medicas.fk_num_doc_pac %></td><!-- N° Doc. del Paciente -->
+                            <td><%= citas_medicas.tel_cit_med %></td><!-- Tel. del Paciente -->
+                            <td><%= citas_medicas.cor_ele_cit_med %></td><!-- Email del Paciente -->
+                            <td class="td_btns">
+                                <a class="modifybtn" title="Editar información" href="edit_med_app"><i class="fa-regular fa-pen-to-square"></i></a>
+                                <a class="deletebtn" title="Eliminar información" href="delete_med_app"><i class="fa-solid fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
             </table>
         </div>
     </section>

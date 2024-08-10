@@ -80,7 +80,7 @@ section div.formulario form input[readonly]:hover {
     background-color: #f0f2f5;
 }
 
-section div.formulario form textarea#des_cla {
+section div.formulario form textarea#des_esp {
     font-family: "Helvetica", sans-serif;
     min-height: 48px;
     max-height: 100px;
@@ -94,7 +94,7 @@ section div.formulario form textarea#des_cla {
     transition: all .3s;
 }
 
-section div.formulario form textarea#des_cla:focus {
+section div.formulario form textarea#des_esp:focus {
     box-shadow: 0 0 5px #0e87fd;
 }
 
@@ -404,7 +404,7 @@ nav ul.men_hor li:hover > ul.men_ver {
         padding: 13px 10px;
     }
 
-    section div.formulario form textarea#des_cla {
+    section div.formulario form textarea#des_esp {
         font-size: 15px;
         min-height: 45px;
         max-height: 97px;
@@ -445,7 +445,7 @@ nav ul.men_hor li:hover > ul.men_ver {
         padding: 10px 10px;
     }
 
-    section div.formulario form textarea#des_cla {
+    section div.formulario form textarea#des_esp {
         font-size: 13px;
         min-height: 37px;
         max-height: 89px;

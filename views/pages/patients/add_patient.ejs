@@ -42,8 +42,8 @@
                     <li class="dif_men"><a href="../workers/mod_worker">Modificar</a></li>
                     <li><a href="../laboral_category_workers/add_lab_cat">Añd. Cat. Lab.</a></li>
                     <li class="dif_men"><a href="../laboral_category_workers/mod_lab_cat">Mod. Cat. Lab.</a></li>
-                    <li><a href="../specialty_workers/add_spe_work">Añd. Espec.</a></li>
-                    <li><a href="../specialty_workers/mod_spe_work">Mod. Espec.</a></li>
+                    <li><a href="../speciality_workers/add_spe_work">Añd. Espec.</a></li>
+                    <li><a href="../speciality_workers/mod_spe_work">Mod. Espec.</a></li>
                 </ul>
             </li>
             <li><a href="#pacientes" class="active">Pacientes <i id="menu" class="fa-solid fa-angle-down"></i></a>
@@ -70,44 +70,44 @@
 
     <section>
         <div class="formulario">
-            <form action="">
+            <form action="/save_pacientes" method="post">
                 <h2>Añadir paciente</h2>
 
-                <!-- Info de la Cita -->
+                <!-- Info del paciente -->
 
                 <label class="labform" for="nom_pac"> Nombre(s) del paciente </label>
-                    <input type="text" id="nom_pac">
+                    <input type="text" id="nom_pac" name="nom_pac">
 
-                <label class="labform" for="app_pac"> Apellido(s) del paciente </label>
-                    <input type="text" id="app_pac">
+                <label class="labform" for="ape_pac"> Apellido(s) del paciente </label>
+                    <input type="text" id="ape_pac" name="ape_pac">
 
                 <label class="labform" for="num_doc_pac"> N° de documento del paciente </label>
-                    <input type="text" id="num_doc_pac">
+                    <input type="text" id="num_doc_pac" name="num_doc_pac">
 
                 <label class="labform" for="fec_nac_pac"> Fecha de nacimiento del paciente</label>
-                    <input type="date" id="fec_nac_pac">
+                    <input type="date" id="fec_nac_pac" name="fec_nac_pac">
 
                 <label class="labform" for="gen_pac"> Género del paciente </label>
-                <select name="" id="gen_pac">
-                    <option value=""> Selecciona una opción </option>
-                    <option value=""> Masculino </option>
-                    <option value=""> Femenino </option>
-                </select>
+                    <select id="gen_pac" name="gen_pac">
+                        <option value=""> Selecciona una opción </option>
+                        <option value=""> Masculino </option>
+                        <option value=""> Femenino </option>
+                    </select>
 
                 <label class="labform" for="dir_pac"> Dirección de residencia del paciente </label>
-                <input type="text" id="dir_pac">
+                    <input type="text" id="dir_pac" name="dir_pac">
 
                 <label class="labform" for="tel_pac"> Número de teléfono del paciente</label>
-                <input type="number" id="tel_pac">
+                    <input type="number" id="tel_pac" name="tel_pac">
 
                 <label class="labform" for="cor_ele_pac"> Correo electrónico del paciente </label>
-                    <input type="email" id="cor_ele_pac">
+                    <input type="email" id="cor_ele_pac" name="cor_ele_pac">
 
                 <label class="labform" for="fec_afi_pac"> Fecha de afiliación del paciente </label>
-                <input type="date" id="fec_afi_pac">
+                    <input type="date" id="fec_afi_pac" name="fec_afi_pac" value="null">
 
                     <!-- Botón Original -->
-                <input type="submit" value="Añadir paciente" class="add_patientbtn" formaction="">
+                <input type="submit" value="Añadir paciente" class="add_patientbtn">
 
                     <!-- Botón Remplazo
                 <a href="" class="add_patient">Añadir paciente</a> -->

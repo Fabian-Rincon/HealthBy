@@ -42,8 +42,8 @@
                     <li class="dif_men"><a href="../workers/mod_worker">Modificar</a></li>
                     <li><a class="active" href="add_lab_cat">Añd. Cat. Lab.</a></li>
                     <li class="dif_men"><a href="mod_lab_cat">Mod. Cat. Lab.</a></li>
-                    <li><a href="../specialty_workers/add_spe_work">Añd. Espec.</a></li>
-                    <li><a href="../specialty_workers/mod_spe_work">Mod. Espec.</a></li>
+                    <li><a href="../speciality_workers/add_spe_work">Añd. Espec.</a></li>
+                    <li><a href="../speciality_workers/mod_spe_work">Mod. Espec.</a></li>
                 </ul>
             </li>
             <li><a href="#pacientes">Pacientes <i id="menu" class="fa-solid fa-angle-down"></i></a>
@@ -70,22 +70,22 @@
 
     <section>
         <div class="formulario">
-            <form action="">
+            <form action="/save_categoria_laboral" method="post">
                 <h2>Añadir categoría laboral</h2>
 
-                <!-- Info de la Cita -->
+                <!-- Info de la categoria laboral -->
 
                 <label class="labform" for="cod_cla"> Código de la categoría laboral </label>
-                    <input type="text" id="cod_cla" value="CL02" readonly> <!-- Number or text -->
+                    <input type="number" id="cod_cla" name="cod_cla" readonly> <!-- Number or text -->
 
                 <label class="labform" for="nom_cla">Nombre de la categoría laboral</label>
-                    <input type="text" id="nom_cla">
+                    <input type="text" id="nom_cla" name="nom_cla">
 
                 <label class="labform" for="des_cla">Descripción de la categoría laboral</label>
-                    <textarea name="" id="des_cla"></textarea>
+                    <textarea id="des_cla" name="des_cla"></textarea>
                     
                     <!-- Botón Original -->
-                <input type="submit" value="Añadir categoría laboral" class="add_lab_catbtn" formaction="">
+                <input type="submit" value="Añadir categoría laboral" class="add_lab_catbtn">
 
                     <!-- Botón Remplazo -->
                 <!-- <a href="" class="add_lab_cat">Añadir categoría laboral</a> -->

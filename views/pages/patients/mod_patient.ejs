@@ -42,8 +42,8 @@
                     <li class="dif_men"><a href="../workers/mod_worker">Modificar</a></li>
                     <li><a href="../laboral_category_workers/add_lab_cat">Añd. Cat. Lab.</a></li>
                     <li class="dif_men"><a href="../laboral_category_workers/mod_lab_cat">Mod. Cat. Lab.</a></li>
-                    <li><a href="../specialty_workers/add_spe_work">Añd. Espec.</a></li>
-                    <li><a href="../specialty_workers/mod_spe_work">Mod. Espec.</a></li>
+                    <li><a href="../speciality_workers/add_spe_work">Añd. Espec.</a></li>
+                    <li><a href="../speciality_workers/mod_spe_work">Mod. Espec.</a></li>
                 </ul>
             </li>
             <li><a href="#pacientes" class="active">Pacientes <i id="menu" class="fa-solid fa-angle-down"></i></a>
@@ -71,78 +71,39 @@
     <section>
         <div class="tabla">
             <table>
-                <tr>
-                    <th>Nomb. del Paciente</th>
-                    <th>Apell. del Paciente</th>
-                    <th>N° Doc. del Paciente</th>
-                    <th>Fec. Nac. del Paciente</th>
-                    <th>Gén. del Paciente</th>
-                    <th>Dir. del Paciente</th>
-                    <th>Tel. del Paciente</th>
-                    <th>Email del Paciente</th>
-                    <th>Fec. Afi. del Paciente</th>
-                    <!-- <th></th> -->
-                </tr>
-                <tr>
-                    <td>Juan Carlos</td><!-- Nomb. del Paciente -->
-                    <td>Pérez</td><!-- Apell. del Paciente -->
-                    <td>10038770016</td><!-- N° Doc. del Paciente -->
-                    <td>15/09/2000</td><!-- Fec. Nac. del Paciente -->
-                    <td>Masculino</td><!-- Gén. del Paciente -->
-                    <td>Calle 15 #10-01</td><!-- Dir. del Paciente -->
-                    <td>3152228800</td><!-- Tel. del Paciente -->
-                    <td>juancaperez@gmail.com</td><!-- Email del Paciente -->
-                    <td>30/06/2018</td><!-- Fec. Afi. del Paciente -->
-                    <td class="td_btns">
-                        <a class="modifybtn" title="Editar información" href="edit_patient"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="deletebtn" title="Eliminar información" href="delete_patient"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>María Alejandra</td><!-- Nomb. del Paciente -->
-                    <td>Rodríguez Pachón</td><!-- Apell. del Paciente -->
-                    <td>7955588810</td><!-- N° Doc. del Paciente -->
-                    <td>18/09/1993</td><!-- Fec. Nac. del Paciente -->
-                    <td>Femenino</td><!-- Gén. del Paciente -->
-                    <td>Carrera 61 #13-24</td><!-- Dir. del Paciente -->
-                    <td>3158080906</td><!-- Tel. del Paciente -->
-                    <td>marialejarod@gmail.com</td><!-- Email del Paciente -->
-                    <td>01/02/2002</td><!-- Fec. Afi. del Paciente -->
-                    <td class="td_btns">
-                        <a class="modifybtn" title="Editar información" href="edit_patient"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="deletebtn" title="Eliminar información" href="delete_patient"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Carlos</td><!-- Nomb. del Paciente -->
-                    <td>Gómez</td><!-- Apell. del Paciente -->
-                    <td>1357924600</td><!-- N° Doc. del Paciente -->
-                    <td>03/03/1985</td><!-- Fec. Nac. del Paciente -->
-                    <td>Masculino</td><!-- Gén. del Paciente -->
-                    <td>Avenida 15 #10-02</td><!-- Dir. del Paciente -->
-                    <td>3135152092</td><!-- Tel. del Paciente -->
-                    <td>cargomez0303@gmail.com</td><!-- Email del Paciente -->
-                    <td>21/05/2007</td><!-- Fec. Afi. del Paciente -->
-                    <td class="td_btns">
-                        <a class="modifybtn" title="Editar información" href="edit_patient"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="deletebtn" title="Eliminar información" href="delete_patient"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>María Fernanda</td><!-- Nomb. del Paciente -->
-                    <td>Castillo</td><!-- Apell. del Paciente -->
-                    <td>2468135920</td><!-- N° Doc. del Paciente -->
-                    <td>04/12/1975</td><!-- Fec. Nac. del Paciente -->
-                    <td>Femenino</td><!-- Gén. del Paciente -->
-                    <td>Calle 101 #72-05</td><!-- Dir. del Paciente -->
-                    <td>3248998160</td><!-- Tel. del Paciente -->
-                    <td>mafe1975@gmail.com</td><!-- Email del Paciente -->
-                    <td>01/11/2012</td><!-- Fec. Afi. del Paciente -->
-                    <td class="td_btns">
-                        <a class="modifybtn" title="Editar información" href="edit_patient"><i class="fa-regular fa-pen-to-square"></i></a>
-                        <a class="deletebtn" title="Eliminar información" href="delete_patient"><i class="fa-solid fa-trash"></i></a>
-                    </td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Nomb. del Paciente</th>
+                        <th>Apell. del Paciente</th>
+                        <th>N° Doc. del Paciente</th>
+                        <th>Fec. Nac. del Paciente</th>
+                        <th>Gén. del Paciente</th>
+                        <th>Dir. del Paciente</th>
+                        <th>Tel. del Paciente</th>
+                        <th>Email del Paciente</th>
+                        <th>Fec. Afi. del Paciente</th>
+                        <!-- <th></th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <% results.forEach((pacientes)=> { %>
+                        <tr>
+                            <td><%= pacientes.nom_pac %></td><!-- Nomb. del Paciente -->
+                            <td><%= pacientes.ape_pac %></td><!-- Apell. del Paciente -->
+                            <td><%= pacientes.num_doc_pac %></td><!-- N° Doc. del Paciente -->
+                            <td><%= pacientes.fec_nac_pac %></td><!-- Fec. Nac. del Paciente -->
+                            <td><%= pacientes.gen_pac %></td><!-- Gén. del Paciente -->
+                            <td><%= pacientes.dir_pac %></td><!-- Dir. del Paciente -->
+                            <td><%= pacientes.tel_pac %></td><!-- Tel. del Paciente -->
+                            <td><%= pacientes.cor_ele_pac %></td><!-- Email del Paciente -->
+                            <td><%= pacientes.fec_afi_pac %></td><!-- Fec. Afi. del Paciente -->
+                            <td class="td_btns">
+                                <a class="modifybtn" title="Editar información" href="edit_patient"><i class="fa-regular fa-pen-to-square"></i></a>
+                                <a class="deletebtn" title="Eliminar información" href="delete_patient"><i class="fa-solid fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
             </table>
         </div>
     </section>

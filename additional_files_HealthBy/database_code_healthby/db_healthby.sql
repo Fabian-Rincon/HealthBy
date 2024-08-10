@@ -23,7 +23,7 @@ cod_sed tinyint primary key not null unique auto_increment,
 nom_sed varchar(40) not null,
 dir_sed varchar(50) default null, 
 tel_sed varchar(20) default null,
-cor_sed varchar(50) default null
+cor_ele_sed varchar(50) default null
 );
 
 create table municipios_sedes 
@@ -45,7 +45,7 @@ gen_pac varchar(12) default null,
 dir_pac varchar(50) default null,
 tel_pac varchar(20) default null,
 cor_ele_pac varchar(50) not null,
-cont_pac varchar(50) not null,
+cont_pac varchar(50) default null,
 fec_afi_pac date default null,
 his_med_pac text default null
 );
@@ -76,7 +76,7 @@ gen_tra varchar(12) default null,
 dir_tra varchar(50) default null,
 tel_tra varchar(20) default null,
 cor_ele_tra varchar(50) not null,
-cont_tra varchar(50) not null,
+cont_tra varchar(50) default null,
 fec_vin_tra date default null,
 fk_cod_sed tinyint,
 fk_cod_cla tinyint,
