@@ -80,7 +80,7 @@ section div.formulario form input[readonly]:hover {
     background-color: #f0f2f5;
 }
 
-section div.formulario form input::placeholder {
+section div.formulario form input[readonly]::placeholder {
     font-size: 17px;
     color: #0e78ff;
 }

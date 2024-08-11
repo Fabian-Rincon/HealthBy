@@ -118,7 +118,7 @@ router.get('/pages/workers/add_worker', (req, res)=>{
 // Editar registros 
 router.get('/pages/workers/edit_worker:num_doc_tra', (req, res)=>{
     const num_doc_tra = req.params.num_doc_tra;
-    conexion.query("SELECT * FROM trabajadores WHERE num_doc_tra=?", [num_doc_tra], (error, results)=>{
+    conexion.query("SELECT num_doc_tra , nom_tra , ape_tra , date_format(fec_nac_tra, '%Y-%m-%d') as fec_nac_tra , gen_tra , dir_tra , tel_tra , cor_ele_tra , cont_tra , date_format(fec_vin_tra,'%Y-%m-%d') as fec_vin_tra , fk_cod_sed , fk_cod_cla FROM trabajadores WHERE num_doc_tra = ?", [num_doc_tra], (error, results)=>{
         if(error){
             throw error;
         }else{
@@ -232,7 +232,7 @@ router.get('/pages/patients/add_patient', (req, res)=>{
 // Editar registros 
 router.get('/pages/patients/edit_patient:num_doc_pac', (req, res)=>{
     const num_doc_pac = req.params.num_doc_pac;
-    conexion.query("SELECT * FROM pacientes WHERE num_doc_pac=?", [num_doc_pac], (error, results)=>{
+    conexion.query("SELECT  num_doc_pac , nom_pac , ape_pac , date_format(fec_nac_pac, '%Y-%m-%d') as fec_nac_pac , gen_pac , dir_pac ,  tel_pac ,  cor_ele_pac , cont_pac , date_format(fec_afi_pac, '%Y-%m-%d') as fec_afi_pac ,  his_med_pac FROM pacientes WHERE num_doc_pac=?", [num_doc_pac], (error, results)=>{
         if(error){
             throw error;
         }else{
@@ -270,7 +270,7 @@ router.get('/pages/medical_appoint/add_med_app', (req, res)=>{
 // Editar registros 
 router.get('/pages/medical_appoint/edit_med_app:cod_cit_med', (req, res)=>{
     const cod_cit_med = req.params.cod_cit_med;
-    conexion.query("SELECT * FROM citas_medicas WHERE cod_cit_med=?", [cod_cit_med], (error, results)=>{
+    conexion.query("SELECT cod_cit_med , esp_cit_med , date_format(fyh_cit_med, '%Y-%m-%dT%H:%i') as fyh_cit_med ,  mot_cit_med , nom_pac_cit_med ,  tel_cit_med , cor_ele_cit_med , fk_num_doc_pac FROM citas_medicas WHERE cod_cit_med=?", [cod_cit_med], (error, results)=>{
         if(error){
             throw error;
         }else{
