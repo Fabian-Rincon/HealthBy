@@ -69,35 +69,35 @@
     </nav>
 
     <section>
-        <% if (municipio) { %>
-        <div class="formulario">
-            <form action="/update_municipios" method="POST">
-                <h2>Editar Municipio</h2>
-                
-                <!-- Info del municipio -->
-                
-                <label class="labform" for="municipio">Nombre del municipio</label>
-                <input type="text" id="nom_mun" name="nom_mun" value="<%= municipio.nom_mun %>">
+        <% if (municipio) { %>  
+            <div class="formulario">
+                <form action="/update_municipios" method="post">
+                    <h2>Editar Municipio</h2>
+                    
+                    <!-- Info del municipio -->
+                    
+                    <label class="labform" for="cod_mun"> Código del municipio </label>
+                        <input type="number" id="cod_mun" name="cod_mun" value="<%= municipio.cod_mun %>" readonly>
 
-                <label class="labform" for="municipio"> Código del municipio </label>
-                <input type="number" id="cod_mun" name="cod_mun" value="<%= municipio.cod_mun %>">
-                
-                <label class="labform" for="municipio">Número de afiliados</label>
-                <input type="number" id="num_afi_mun" name="num_afi_mun"value="<%= municipio.num_afi_mun %>">
-            
-                <label class="labform" for="municipio"> Departamento al que pertenece </label>
-                <select name="fk_nom_dep" id="fk_nom_dep">
-                    <option <%= municipio.fk_nom_dep=='cundinamarca' ? "selected" : '' %> value="cundinamarca">Cundinamarca</option>
-                </select>
+                    <label class="labform" for="nom_mun">Nombre del municipio</label>
+                        <input type="text" id="nom_mun" name="nom_mun" value="<%= municipio.nom_mun %>" required>
 
-                <!-- Botón Original -->
-                <input type="submit" value="Actualizar municipio" class="edit_municipalitybtn">
-                <a href="mod_municipality" class="cancelbtn"> Cancelar</a>
+                    <label class="labform" for="num_afi_mun">Número de afiliados</label>
+                        <input type="number" id="num_afi_mun" name="num_afi_mun"value="<%= municipio.num_afi_mun %>" required>
                 
-                <!-- Botón Remplazo -->
-                <!-- <a href="mod_municipality" class="edit_municipality">Actualizar municipio</a> -->
-            </form>
-        </div>
+                    <label class="labform" for="fk_nom_dep"> Departamento al que pertenece </label>
+                        <select name="fk_nom_dep" id="fk_nom_dep" required>
+                            <option <%= municipio.fk_nom_dep=='cundinamarca' ? "selected" : '' %> value="Cundinamarca">Cundinamarca</option>
+                        </select>
+
+                    <!-- Botón Original -->
+                    <input type="submit" value="Actualizar municipio" class="edit_municipalitybtn">
+                    <a href="mod_municipality" class="cancelbtn"> Cancelar</a>
+                    
+                    <!-- Botón Remplazo -->
+                    <!-- <a href="mod_municipality" class="edit_municipality">Actualizar municipio</a> -->
+                </form>
+            </div>
         <% } %>
     </section>
 </body>

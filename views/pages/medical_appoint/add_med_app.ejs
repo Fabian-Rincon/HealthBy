@@ -76,35 +76,35 @@
                 <!-- Info de la Cita medica -->
 
                 <label class="labform" for="cod_cit_med"> Código de la Cita médica </label>
-                    <input type="number" id="cod_cit_med" name="cod_cit_med" readonly>
+                    <input type="number" id="cod_cit_med" name="cod_cit_med" placeholder="1000000001" readonly>
                     
                 <label class="labform" for="esp_cit_med"> Especialista que atenderá </label>
-                    <select id="esp_cit_med" name="esp_cit_med">
+                    <select id="esp_cit_med" name="esp_cit_med" required>
                         <option value=""> Selecciona una opción </option>
-                        <option value=""> Dr. Alejandro Sánchez </option>
-                        <option value=""> Dra. Laura Rodríguez </option>
-                        <option value=""> Dr. Carlos Medina </option>
+                        <option value="Dr. Alejandro Sánchez"> Dr. Alejandro Sánchez </option>
+                        <option value="Dra. Laura Rodríguez"> Dra. Laura Rodríguez </option>
+                        <option value="Dr. Carlos Medina"> Dr. Carlos Medina </option>
                     </select>
 
                 <label class="labform" for="fyh_cit_med"> Fecha y hora de la cita médica</label>
-                    <input type="datetime-local" id="fyh_cit_med" name="fyh_cit_med">
+                    <input type="datetime-local" id="fyh_cit_med" name="fyh_cit_med" required>
 
                 <label class="labform" for="mot_cit_med"> Motivo de la cita médica </label>
-                    <textarea name="" id="mot_cit_med" name="mot_cit_med"></textarea>
+                    <textarea id="mot_cit_med" name="mot_cit_med" placeholder="Describa brevemente el motivo de su consulta medica"></textarea required>
                 
             <!-- Info del paciente -->
 
                 <label class="labform" for="nom_pac_cit_med">Nombre del paciente</label>
-                    <input type="text" id="nom_pac_cit_med" name="nom_pac_cit_med">
+                    <input type="text" id="nom_pac_cit_med" name="nom_pac_cit_med" required>
 
-                <label class="labform" for="num_doc_pac"> Número de documento del paciente</label>
-                    <input type="text" id="fk_num_doc_pac" name="fk_num_doc_pac">
+                <label class="labform" for="fk_num_doc_pac"> Número de documento del paciente</label>
+                    <input type="text" id="fk_num_doc_pac" name="fk_num_doc_pac" placeholder="Asegúrese que sea el mismo con el que ingresó." required>
 
                 <label class="labform" for="tel_cit_med">Número de teléfono del paciente</label>
-                    <input type="number" id="tel_cit_med" name="tel_cit_med">
+                    <input type="number" id="tel_cit_med" name="tel_cit_med" required>
 
                 <label class="labform" for="cor_ele_cit_med">Correo electrónico del paciente</label>
-                    <input type="email" id="cor_ele_cit_med" name="cor_ele_cit_med">
+                    <input type="email" id="cor_ele_cit_med" name="cor_ele_cit_med" required>
 
                     <!-- Botón Original -->
                 <input type="submit" value="Agendar cita médica" class="add_med_appbtn">

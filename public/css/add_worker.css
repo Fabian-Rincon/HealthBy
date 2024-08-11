@@ -81,6 +81,11 @@ section div.formulario form input#fec_nac_tra {
     cursor: text;
 }
 
+section div.formulario form input::placeholder {
+    font-size: 17px;
+    color: #0e78ff;
+}
+
 section div.formulario form input#fec_vin_tra::-webkit-calendar-picker-indicator,
 section div.formulario form input#fec_nac_tra::-webkit-calendar-picker-indicator {
     font-size: 16px;

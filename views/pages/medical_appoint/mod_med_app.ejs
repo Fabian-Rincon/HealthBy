@@ -96,8 +96,8 @@
                             <td><%= citas_medicas.tel_cit_med %></td><!-- Tel. del Paciente -->
                             <td><%= citas_medicas.cor_ele_cit_med %></td><!-- Email del Paciente -->
                             <td class="td_btns">
-                                <a class="modifybtn" title="Editar información" href="edit_med_app"><i class="fa-regular fa-pen-to-square"></i></a>
-                                <a class="deletebtn" title="Eliminar información" href="delete_med_app"><i class="fa-solid fa-trash"></i></a>
+                                <a class="modifybtn" title="Editar información" href="edit_med_app<%= citas_medicas.cod_cit_med %>"><i class="fa-regular fa-pen-to-square"></i></a>
+                                <a class="deletebtn" title="Eliminar información" href="delete_med_app<%= citas_medicas.cod_cit_med %>"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>
                     <% }) %>

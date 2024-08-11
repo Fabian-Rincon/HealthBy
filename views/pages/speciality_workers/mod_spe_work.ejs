@@ -86,8 +86,8 @@
                             <td><%= especialidad.nom_esp %></td><!-- Nom. Especialidad -->
                             <td><%= especialidad.des_esp %></td><!-- Desc. Especialidad -->
                             <td class="td_btns">
-                                <a class="modifybtn" title="Editar información" href="edit_spe_work"><i class="fa-regular fa-pen-to-square"></i></a>
-                                <a class="deletebtn" title="Eliminar información" href="delete_spe_work"><i class="fa-solid fa-trash"></i></a>
+                                <a class="modifybtn" title="Editar información" href="edit_spe_work<%= especialidad.cod_esp %>"><i class="fa-regular fa-pen-to-square"></i></a>
+                                <a class="deletebtn" title="Eliminar información" href="delete_spe_work<%= especialidad.cod_esp %>"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>
                     <% }) %>

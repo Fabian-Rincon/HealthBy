@@ -86,8 +86,8 @@
                             <td><%= categoria_laboral.nom_cla %></td><!-- Nom. Categoría Laboral -->
                             <td><%= categoria_laboral.des_cla %></td><!-- Desc. Categoría Laboral -->
                             <td class="td_btns">
-                                <a class="modifybtn" title="Editar información" href="edit_lab_cat"><i class="fa-regular fa-pen-to-square"></i></a>
-                                <a class="deletebtn" title="Eliminar información" href="delete_lab_cat"><i class="fa-solid fa-trash"></i></a>
+                                <a class="modifybtn" title="Editar información" href="edit_lab_cat<%= categoria_laboral.cod_cla %>"><i class="fa-regular fa-pen-to-square"></i></a>
+                                <a class="deletebtn" title="Eliminar información" href="delete_lab_cat<%= categoria_laboral.cod_cla %>"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>
                     <% }) %>

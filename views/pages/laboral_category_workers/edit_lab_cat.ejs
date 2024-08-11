@@ -69,30 +69,31 @@
     </nav>
 
     <section>
-        <div class="formulario">
-                <form action="">
-                <h2>Editar categoría laboral</h2>
+        <% if (categoria_laboral) { %>  
+            <div class="formulario">
+                <form action="/update_categoria_laboral" method="post">
+                    <h2>Editar categoría laboral</h2>
 
-                <!-- Info de la Cita -->
+                    <!-- Info de la Cita -->
 
-                <label class="labform" for="cod_cla"> Código de la categoría laboral </label>
-                    <input type="text" id="cod_cla" value="CL02" readonly> <!-- Number or text -->
+                    <label class="labform" for="cod_cla"> Código de la categoría laboral </label>
+                        <input type="number" id="cod_cla" name="cod_cla" value="<%= categoria_laboral.cod_cla %>" readonly> <!-- Number or text -->
 
-                <label class="labform" for="nom_cla">Nombre de la categoría laboral</label>
-                    <input type="text" id="nom_cla">
+                    <label class="labform" for="nom_cla">Nombre de la categoría laboral</label>
+                        <input type="text" id="nom_cla" name="nom_cla" value="<%= categoria_laboral.nom_cla %>" required>
 
-                <label class="labform" for="des_cla">Descripción de la categoría laboral</label>
-                    <textarea name="" id="des_cla"></textarea>
-                    
-                    <!-- Botón Original -->
-                <input type="submit" value="Actualizar categoría laboral" class="edit_lab_catbtn" formaction="mod_lab_cat">
-                <a href="mod_lab_cat" class="cancelbtn">Cancelar</a>
+                    <label class="labform" for="des_cla">Descripción de la categoría laboral</label>
+                        <textarea id="des_cla" name="des_cla" required><%= categoria_laboral.des_cla %></textarea>
+                        
+                        <!-- Botón Original -->
+                    <input type="submit" value="Actualizar categoría laboral" class="edit_lab_catbtn">
+                    <a href="mod_lab_cat" class="cancelbtn">Cancelar</a>
 
-                    <!-- Botón Remplazo -->
-                <!-- <a href="mod_lab_cat" class="edit_lab_cat">Actualizar categoría laboral</a> -->
-
+                        <!-- Botón Remplazo -->
+                    <!-- <a href="mod_lab_cat" class="edit_lab_cat">Actualizar categoría laboral</a> -->
                 </form>
-        </div>
+            </div>
+        <% } %>
     </section>
 </body>
 </html>

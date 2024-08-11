@@ -69,54 +69,56 @@
     </nav>
 
     <section>
-        <div class="formulario">
-                <form action="">
-                <h2>Editar trabajador</h2>
+        <% if (trabajador) { %>  
+            <div class="formulario">
+                <form action="/update_trabajadores" method="post">
+                    <h2>Editar trabajador</h2>
 
-                <!-- Info de la Cita -->
+                    <!-- Info de la Cita -->
 
-                <label class="labform" for="nom_tra"> Nombre(s) del trabajador </label>
-                    <input type="text" id="nom_tra">
+                    <label class="labform" for="num_doc_tra"> N° de documento del trabajador </label>
+                        <input type="text" name="num_doc_tra" id="num_doc_tra" value="<%= trabajador.num_doc_tra %>" readonly>
 
-                <label class="labform" for="app_tra"> Apellido(s) del trabajador </label>
-                    <input type="text" id="app_tra">
+                    <label class="labform" for="nom_tra"> Nombre(s) del trabajador </label>
+                        <input type="text" name="nom_tra" id="nom_tra" value="<%= trabajador.nom_tra %>" required>
 
-                <label class="labform" for="num_doc_tra"> N° de documento del trabajador </label>
-                    <input type="text" id="num_doc_tra">
+                    <label class="labform" for="ape_tra"> Apellido(s) del trabajador </label>
+                        <input type="text" name="ape_tra" id="ape_tra" value="<%= trabajador.ape_tra %>" required>
 
-                <label class="labform" for="fec_nac_tra"> Fecha de nacimiento del trabajador </label>
-                    <input type="date" id="fec_nac_tra">
+                    <label class="labform" for="fec_nac_tra"> Fecha de nacimiento del trabajador </label>
+                        <input type="date" name="fec_nac_tra" id="fec_nac_tra" value="<%= trabajador.fec_nac_tra %>" required>
 
-                <label class="labform" for="gen_tra"> Género del trabajador </label>
-                <select name="" id="gen_tra">
-                    <option value=""> Selecciona una opción </option>
-                    <option value=""> Masculino </option>
-                    <option value=""> Femenino </option>
-                </select>
+                    <label class="labform" for="gen_tra"> Género del trabajador </label>
+                    <select name="gen_tra" id="gen_tra" required>
+                        <!-- <option value=""> Selecciona una opción </option> -->
+                        <option <%= trabajador.gen_tra=='Masculino' ? "selected" : '' %> value="Masculino"> Masculino </option>
+                        <option <%= trabajador.gen_tra=='Femenino' ? "selected" : '' %> value="Femenino"> Femenino </option>
+                    </select>
 
-                <label class="labform" for="tel_tra"> Número de teléfono del trabajador </label>
-                <input type="number" id="tel_tra">
+                    <label class="labform" for="tel_tra"> Número de teléfono del trabajador </label>
+                    <input type="number" name="tel_tra" id="tel_tra" value="<%= trabajador.tel_tra %>" required>
 
-                <label class="labform" for="cor_ele_tra"> Correo electrónico del trabajador </label>
-                    <input type="email" id="cor_ele_tra">
+                    <label class="labform" for="cor_ele_tra"> Correo electrónico del trabajador </label>
+                        <input type="email" name="cor_ele_tra" id="cor_ele_tra" value="<%= trabajador.cor_ele_tra %>" required>
 
-                <label class="labform" for="fec_vin_tra"> Fecha de vinculación laboral del trabajador </label>
-                    <input type="date" id="fec_vin_tra">
+                    <label class="labform" for="fec_vin_tra"> Fecha de vinculación laboral del trabajador </label>
+                        <input type="date" name="fec_vin_tra" id="fec_vin_tra" value="<%= trabajador.fec_vin_tra %>" required>
 
-                <label class="labform" for="cod_sed">Código de la sede correspondiente</label>
-                    <input type="number" id="cod_sed">
+                    <label class="labform" for="fk_cod_sed">Código de la sede correspondiente</label>
+                        <input type="number" name="fk_cod_sed" id="fk_cod_sed" value="<%= trabajador.fk_cod_sed %>" required>
 
-                <label class="labform" for="cod_cla">Código de la categoría laboral correspondiente</label>
-                    <input type="number" id="cod_cla">
+                    <label class="labform" for="fk_cod_cla">Código de la categoría laboral correspondiente</label>
+                        <input type="number" name="fk_cod_cla" id="fk_cod_cla" value="<%= trabajador.fk_cod_cla %>" required>
 
-                    <!-- Botón Original -->
-                <input type="submit" value="Actualizar trabajador" class="edit_workerbtn" formaction="mod_worker">
-                <a href="mod_worker" class="cancelbtn">Cancelar</a>
+                        <!-- Botón Original -->
+                    <input type="submit" value="Actualizar trabajador" class="edit_workerbtn">
+                    <a href="mod_worker" class="cancelbtn">Cancelar</a>
 
-                    <!-- Botón Remplazo -->
-                <!-- <a href="mod_worker" class="edit_worker">Actualizar trabajador</a> -->
+                        <!-- Botón Remplazo -->
+                    <!-- <a href="mod_worker" class="edit_worker">Actualizar trabajador</a> -->
                 </form>
-        </div>
+            </div>
+        <% } %>
     </section>
 </body>
 </html>

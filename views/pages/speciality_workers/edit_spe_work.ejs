@@ -69,30 +69,31 @@
     </nav>
 
     <section>
-        <div class="formulario">
-            <form action="">
-                <h2>Editar especialidad</h2>
+        <% if (especialidad) { %>  
+            <div class="formulario">
+                <form action="/update_especialidad" method="post">
+                    <h2>Editar especialidad</h2>
 
-                <!-- Info de la Cita -->
+                    <!-- Info de la Cita -->
 
-                <label class="labform" for="cod_cla"> Código de la especialidad </label>
-                    <input type="text" id="cod_cla" value="ET02" readonly> <!-- Number or text -->
+                    <label class="labform" for="cod_esp"> Código de la especialidad </label>
+                        <input type="text" name="cod_esp" id="cod_esp" value="<%= especialidad.cod_esp %>" readonly> <!-- Number or text -->
 
-                <label class="labform" for="nom_cla">Nombre de la especialidad</label>
-                    <input type="text" id="nom_cla">
+                    <label class="labform" for="nom_esp">Nombre de la especialidad</label>
+                        <input type="text" name="nom_esp" id="nom_esp" value="<%= especialidad.nom_esp %>" required>
 
-                <label class="labform" for="des_cla">Descripción de la especialidad</label>
-                    <textarea name="" id="des_cla"></textarea>
-                    
-                    <!-- Botón Original -->
-                <input type="submit" value="Actualizar especialidad" class="edit_spe_workbtn" formaction="mod_spe_work">
-                <a href="mod_spe_work" class="cancelbtn">Cancelar</a>
+                    <label class="labform" for="des_esp">Descripción de la especialidad</label>
+                        <textarea name="des_esp" id="des_esp" required><%= especialidad.des_esp %></textarea>
+                        
+                        <!-- Botón Original -->
+                    <input type="submit" value="Actualizar especialidad" class="edit_spe_workbtn">
+                    <a href="mod_spe_work" class="cancelbtn">Cancelar</a>
 
-                    <!-- Botón Remplazo -->
-                <!-- <a href="mod_spe_work" class="edit_spe_work">Actualizar especialidad</a> -->
-
-            </form>
-        </div>
+                        <!-- Botón Remplazo -->
+                    <!-- <a href="mod_spe_work" class="edit_spe_work">Actualizar especialidad</a> -->
+                </form>
+            </div>
+        <% } %>
     </section>
 </body>
 </html>

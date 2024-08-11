@@ -88,6 +88,11 @@ section div.formulario form select:focus {
    box-shadow: 0 0 5px #0e87fd;
 }
 
+section div.formulario form input[readonly]:hover {
+    cursor: not-allowed;
+    background-color: #f0f2f5;
+}
+
 /* Botón añadir municipio - cancelar */
 section div.formulario form input.edit_municipalitybtn {
    background-color: #0e87fd;

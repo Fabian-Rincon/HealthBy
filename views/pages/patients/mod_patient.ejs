@@ -98,8 +98,8 @@
                             <td><%= pacientes.cor_ele_pac %></td><!-- Email del Paciente -->
                             <td><%= pacientes.fec_afi_pac %></td><!-- Fec. Afi. del Paciente -->
                             <td class="td_btns">
-                                <a class="modifybtn" title="Editar información" href="edit_patient"><i class="fa-regular fa-pen-to-square"></i></a>
-                                <a class="deletebtn" title="Eliminar información" href="delete_patient"><i class="fa-solid fa-trash"></i></a>
+                                <a class="modifybtn" title="Editar información" href="edit_patient<%= pacientes.num_doc_pac %>"><i class="fa-regular fa-pen-to-square"></i></a>
+                                <a class="deletebtn" title="Eliminar información" href="delete_patient<%= pacientes.num_doc_pac %>"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>
                     <% }) %>

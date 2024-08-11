@@ -69,35 +69,37 @@
     </nav>
 
     <section>
-        <div class="formulario">
-                <form action="">
-                <h2>Editar Sede</h2>
+        <% if (sede) { %>  
+            <div class="formulario">
+                <form action="/update_sedes" method="post">
+                    <h2>Editar Sede</h2>
 
-                <!-- Info de la Cita -->
+                    <!-- Info de la Cita -->
 
-                <label class="labform" for="nom_sed"> Nombre de la sede </label>
-                <input type="text" id="nom_sed">
+                    <label class="labform" for="cod_sed"> Código de la sede </label>
+                        <input type="number" id="cod_sed" name="cod_sed" value="<%= sede.cod_sed %>" readonly>
 
-                <label class="labform" for="cod_sed"> Código de la sede </label>
-                    <input type="number" id="cod_sed">
+                    <label class="labform" for="nom_sed"> Nombre de la sede </label>
+                        <input type="text" id="nom_sed" name="nom_sed" value="<%= sede.nom_sed %>" required>
 
-                <label class="labform" for="dir_sed"> Dirección de la sede </label>
-                    <input type="text" id="dir_sed">
+                    <label class="labform" for="dir_sed"> Dirección de la sede </label>
+                        <input type="text" id="dir_sed" name="dir_sed" value="<%= sede.dir_sed %>" required>
 
-                <label class="labform" for="tel_sed"> Teléfono de la sede </label>
-                    <input type="text" id="tel_sed">
+                    <label class="labform" for="tel_sed"> Teléfono de la sede </label>
+                        <input type="text" id="tel_sed" name="tel_sed" value="<%= sede.tel_sed %>" required>
 
-                <label class="labform" for="cor_ele_sed"> Correo electrónico de la sede </label>
-                    <input type="email" id="cor_ele_sed">
+                    <label class="labform" for="cor_ele_sed"> Correo electrónico de la sede </label>
+                        <input type="email" id="cor_ele_sed" name="cor_ele_sed"value="<%= sede.cor_ele_sed %>" required>
 
-                    <!-- Botón Original -->
-                <input type="submit" value="Actualizar sede" class="edit_headquartersbtn" formaction="mod_headquarters">
-                <a href="mod_headquarters" class="cancelbtn">Cancelar</a>
+                        <!-- Botón Original -->
+                    <input type="submit" value="Actualizar sede" class="edit_headquartersbtn">
+                    <a href="mod_headquarters" class="cancelbtn">Cancelar</a>
 
-                    <!-- Botón Remplazo -->
-                <!-- <a href="mod_headquarters" class="edit_headquarters">Actualizar sede</a> -->
+                        <!-- Botón Remplazo -->
+                    <!-- <a href="mod_headquarters" class="edit_headquarters">Actualizar sede</a> -->
                 </form>
-        </div>
+            </div>
+        <% } %>
     </section>
 </body>
 </html>

@@ -62,58 +62,60 @@
                 <ul class="men_ver">
                     <li><a href="../account/edit_data">Modificar datos</a></li>
                     <li><a href="../account/mod_password">Cambiar contraseña</a></li>
-                </ul>
+                </ul required>
                 </li>
                 <li class="animationscl"><a class="signoff" href="../login">Cerrar sesión</a></li>
         </ul>
     </nav>
 
     <section>
-        <div class="formulario">
-                <form action="">
-                <h2>Editar Cita Médica</h2>
+        <% if (cita_medica) { %>  
+            <div class="formulario">
+                <form action="/update_citas_medicas" method="post">
+                    <h2>Editar Cita Médica</h2>
 
-                <!-- Info de la Cita -->
+                    <!-- Info de la Cita -->
 
-                <label class="labform" for="cod_cit_med"> Código de la Cita médica </label>
-                    <input type="number" id="cod_cit_med" value="01758963" readonly>
+                    <label class="labform" for="cod_cit_med"> Código de la Cita médica </label>
+                        <input type="number" name="cod_cit_med" id="cod_cit_med" value="<%= cita_medica.cod_cit_med %>" readonly>
+                        
+                    <label class="labform" for="esp_cit_med"> Especialista que atenderá </label>
+                        <select name="esp_cit_med" id="esp_cit_med" required>
+                                <!-- <option value=""> Selecciona una opción </option> -->
+                                <option <%= cita_medica.esp_cit_med=='Dr. Alejandro Sánchez' ? "selected" : '' %> value="Dr. Alejandro Sánchez"> Dr. Alejandro Sánchez </option>
+                                <option <%= cita_medica.esp_cit_med=='Dra. Laura Rodríguez' ? "selected" : '' %> value="Dra. Laura Rodríguez"> Dra. Laura Rodríguez </option>
+                                <option <%= cita_medica.esp_cit_med=='Dr. Carlos Medina' ? "selected" : '' %> value="Dr. Carlos Medina"> Dr. Carlos Medina </option>
+                        </select>
+
+                    <label class="labform" for="fyh_cit_med"> Fecha y hora de la cita médica</label>
+                        <input type="datetime-local" name="fyh_cit_med" id="fyh_cit_med" value="<%= cita_medica.fyh_cit_med %>" required>
+
+                    <label class="labform" for="mot_cit_med"> Motivo de la cita médica </label>
+                        <textarea name="mot_cit_med" id="mot_cit_med" required><%= cita_medica.mot_cit_med %></textarea required>
                     
-                <label class="labform" for="esp_cit_med"> Especialista que atenderá </label>
-                    <select name="" id="esp_cit_med">
-                            <option value=""> Selecciona una opción </option>
-                            <option value=""> Dr. Alejandro Sánchez </option>
-                            <option value=""> Dra. Laura Rodríguez </option>
-                            <option value=""> Dr. Carlos Medina </option>
-                    </select>
+                    <!-- Info del paciente -->
 
-                <label class="labform" for="fyh_cit_med"> Fecha y hora de la cita médica</label>
-                    <input type="datetime-local" id="fyh_cit_med">
+                    <label class="labform" for="nom_pac_cit_med">Nombre del paciente</label>
+                        <input type="text" name="nom_pac_cit_med" id="nom_pac_cit_med" value="<%= cita_medica.nom_pac_cit_med %>" required>
 
-                <label class="labform" for="mot_cit_med"> Motivo de la cita médica </label>
-                    <textarea name="" id="mot_cit_med"></textarea>
-                
-                <!-- Info del paciente -->
+                    <label class="labform" for="fk_num_doc_pac"> Número de documento del paciente</label>
+                        <input type="text" name="fk_num_doc_pac" id="num_doc_pac" value="<%= cita_medica.fk_num_doc_pac %>" required>
 
-                <label class="labform" for="nom_pac_cit_med">Nombre del paciente</label>
-                    <input type="text" id="nom_pac_cit_med">
+                    <label class="labform" for="tel_cit_med">Número de teléfono del paciente</label>
+                        <input type="number" name="tel_cit_med" id="tel_cit_med" value="<%= cita_medica.tel_cit_med %>" required>
 
-                <label class="labform" for="num_doc_pac"> Número de documento del paciente</label>
-                    <input type="text" id="num_doc_pac">
+                    <label class="labform" for="cor_ele_cit_med">Correo electrónico del paciente</label>
+                        <input type="email" name="cor_ele_cit_med" id="cor_ele_cit_med" value="<%= cita_medica.cor_ele_cit_med %>" required>
 
-                <label class="labform" for="tel_cit_med">Número de teléfono del paciente</label>
-                    <input type="number" id="tel_cit_med">
+                        <!-- Botón Original -->
+                    <input type="submit" value="Actualizar cita médica" class="edit_med_appbtn">
+                    <a href="mod_med_app" class="cancelbtn">Cancelar</a>
 
-                <label class="labform" for="cor_ele_cit_med">Correo electrónico del paciente</label>
-                    <input type="email" id="cor_ele_cit_med">
-
-                    <!-- Botón Original -->
-                <input type="submit" value="Actualizar cita médica" class="edit_med_appbtn" formaction="mod_med_app">
-                <a href="mod_med_app" class="cancelbtn">Cancelar</a>
-
-                    <!-- Botón Remplazo -->
-                <!-- <a href="mod_med_app" class="edit_med_app">Actualizar cita médica</a> -->
+                        <!-- Botón Remplazo -->
+                    <!-- <a href="mod_med_app" class="edit_med_app">Actualizar cita médica</a> -->
                 </form>
-        </div>
+            </div>
+        <% } %>
     </section>
 </body>
 </html>

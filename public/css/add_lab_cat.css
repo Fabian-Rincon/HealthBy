@@ -80,6 +80,11 @@ section div.formulario form input[readonly]:hover {
     background-color: #f0f2f5;
 }
 
+section div.formulario form input::placeholder {
+    font-size: 17px;
+    color: #0e78ff;
+}
+
 section div.formulario form textarea#des_cla {
     font-family: "Helvetica", sans-serif;
     min-height: 48px;

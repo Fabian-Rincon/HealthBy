@@ -4,9 +4,10 @@ CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
 use healthby;
 create table departamento
 (
-nom_dep varchar(20) primary key not null default "cundinamarca",
+nom_dep varchar(20) primary key not null default "Cundinamarca",
 num_afi_dep mediumint default null 
 );
+INSERT INTO `departamento` (`nom_dep`, `num_afi_dep`) VALUES ('Cundinamarca', NULL);
 
 create table municipios 
 (
@@ -63,7 +64,7 @@ create table categoria_laboral
 (
 cod_cla tinyint primary key not null unique auto_increment,
 nom_cla varchar(30) not null,
-des_cla varchar(200) default null
+des_cla varchar(200) not null
 );
 
 create table trabajadores
@@ -97,7 +98,7 @@ create table especialidad
 (
 cod_esp tinyint primary key not null unique auto_increment,
 nom_esp varchar (30) not null,
-des_esp varchar(200) default null
+des_esp varchar(200) not null
 );
 
 create table trabajadores_especialidad
@@ -117,8 +118,8 @@ fyh_cit_med datetime not null,
 mot_cit_med varchar(255) default null,
 nom_pac_cit_med varchar(50) not null,
 tel_cit_med varchar(20) default null,
-cor_ele_cit_med varchar(50) default null,
-fk_num_doc_pac varchar(15),
+cor_ele_cit_med varchar(50) not null,
+fk_num_doc_pac varchar(15) not null,
 foreign key(fk_num_doc_pac) references pacientes(num_doc_pac)
 );
 

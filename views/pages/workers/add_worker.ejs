@@ -75,39 +75,39 @@
 
                 <!-- Info del trabajador -->
 
+                <label class="labform" for="num_doc_tra"> N° de documento del trabajador </label>
+                    <input type="text" id="num_doc_tra" name="num_doc_tra" required>
+
                 <label class="labform" for="nom_tra"> Nombre(s) del trabajador </label>
-                    <input type="text" id="nom_tra" name="nom_tra">
+                    <input type="text" id="nom_tra" name="nom_tra" required>
 
                 <label class="labform" for="ape_tra"> Apellido(s) del trabajador </label>
-                    <input type="text" id="ape_tra" name="ape_tra">
+                    <input type="text" id="ape_tra" name="ape_tra" required>
  
-                <label class="labform" for="num_doc_tra"> N° de documento del trabajador </label>
-                    <input type="text" id="num_doc_tra" name="num_doc_tra">
-
                 <label class="labform" for="fec_nac_tra"> Fecha de nacimiento del trabajador </label>
-                    <input type="date" id="fec_nac_tra" name="fec_nac_tra">
+                    <input type="date" id="fec_nac_tra" name="fec_nac_tra" required>
 
                 <label class="labform" for="gen_tra"> Género del trabajador </label>
-                    <select name="" id="gen_tra" name="gen_tra">
+                    <select id="gen_tra" name="gen_tra" required>
                         <option value=""> Selecciona una opción </option>
-                        <option value=""> Masculino </option>
-                        <option value=""> Femenino </option>
+                        <option value="Masculino"> Masculino </option>
+                        <option value="Femenino"> Femenino </option>
                     </select>
 
                 <label class="labform" for="tel_tra"> Número de teléfono del trabajador </label>
-                    <input type="number" id="tel_tra" name="tel_tra">
+                    <input type="number" id="tel_tra" name="tel_tra" required>
 
                 <label class="labform" for="cor_ele_tra"> Correo electrónico del trabajador </label>
-                    <input type="email" id="cor_ele_tra" name="cor_ele_tra">
+                    <input type="email" id="cor_ele_tra" name="cor_ele_tra" required>
 
                 <label class="labform" for="fec_vin_tra"> Fecha de vinculación laboral del trabajador </label>
-                    <input type="date" id="fec_vin_tra" name="fec_vin_tra">
+                    <input type="date" id="fec_vin_tra" name="fec_vin_tra" required>
 
-                <label class="labform" for="cod_sed">Código de la sede correspondiente</label>
-                    <input type="number" id="fk_cod_sed" name="fk_cod_sed">
+                <label class="labform" for="fk_cod_sed">Código de la sede correspondiente</label>
+                    <input type="number" id="fk_cod_sed" name="fk_cod_sed" placeholder="Asegúrese que el código de la sede exista." required>
 
-                <label class="labform" for="cod_cla">Código de la categoría laboral correspondiente</label>
-                    <input type="number" id="fk_cod_cla" name="fk_cod_cla">
+                <label class="labform" for="fk_cod_cla">Código de la categoría laboral correspondiente</label>
+                    <input type="number" id="fk_cod_cla" name="fk_cod_cla" placeholder="Asegúrese que el código de la Cat. Lab. exista." required>
 
                     <!-- Botón Original -->
                 <input type="submit" value="Añadir trabajador" class="add_workerbtn">

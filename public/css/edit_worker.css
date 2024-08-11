@@ -74,6 +74,11 @@ section div.formulario form input:focus {
    box-shadow: 0 0 5px #0e87fd;
 }
 
+section div.formulario form input[readonly]:hover {
+    cursor: not-allowed;
+    background-color: #f0f2f5;
+}
+
 section div.formulario form input#fec_vin_tra,
 section div.formulario form input#fec_nac_tra {
    font-family: "Helvetica", sans-serif;
