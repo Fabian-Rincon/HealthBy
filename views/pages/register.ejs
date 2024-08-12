@@ -33,31 +33,35 @@
         <div class="formulario">
             <img src="../img/HealthBy_logo.png" class="image" alt="HealthBy" title="HealthBy"/>
 
-            <form action="/reg_usu" method="post">
+            <form action="/validar" method="post">
                 <h2>Regístrate</h2>
 
-                <label class="labform" for="num_doc_adm"> N° de documento </label>
-                <input type="text" name="num_doc_adm" id="num_doc_adm" required>
+                <label class="labform" for="num_doc"> N° de documento </label>
+                    <input type="text" name="num_doc_pac" id="num_doc" required>
                 
-                <label class="labform" for="nom_adm"> Nombre(s)</label>
-                <input type="text" name="nom_adm" id="nom_adm" required />
-                
-                <label class="labform" for="ape_adm"> Apellido(s) </label>
-                <input type="text" name="ape_adm" id="ape_adm" required />
-                
-                <label class="labform" for="cor_ele_adm"> Correo electrónico </label>
-                <input type="email" name="cor_ele_adm" id="cor_ele_adm" required />
-                
-                <label class="labform" for="cont_adm"> Contraseña </label>
-                <input type="password" name="cont_adm" id="cont_adm" required />
-                <br>
-                <div style="text-align: center;"><%= msg %></div>
+                <label class="labform" for="name"> Nombre(s)
+                </label>
+                    <input type="text" name="nom_pac" id="name" required />
+
+                <label class="labform" for="last_name"> Apellido(s) </label>
+                    <input type="text" name="ape_pac" id="last_name" required />
+
+                <label class="labform" for="birthdate"> Fecha de nacimiento </label>
+                    <input type="date" name="fec_nac_pac" id="birthdate" required>
+
+                <label class="labform" for="email"> Correo electrónico </label>
+                    <input type="email" name="cor_ele_pac" id="email" required />
+
+                <label class="labform" for="password"> Contraseña
+                </label>
+                    <input type="password" name="cont_pac" id="password" required />
+
                 <!-- Botón Original -->
                 <input type="submit" value="Regístrate" class="registerbtn">
-                
+
                 <!-- Botón Remplazo -->
                 <!-- <a href="../pages/login" class="registerbtn">Regístrate</a> -->
-                
+
                 <div class="logintxt">
                     <p class="l1">¿Ya tienes una cuenta?</p>
                     <p class="l2">
