@@ -1,0 +1,446 @@
+* {
+   padding: 0;
+   margin: 0;
+   text-decoration: none;
+   list-style: none;
+   box-sizing: border-box;
+   scrollbar-width: none;
+}
+
+body {
+   font-family: "Helvetica", sans-serif;
+   background-color: #f0f2f5;
+}
+
+/* Contenido */
+section {
+    /* height: 690px; */
+    /* height: 100vh; */
+    height: auto;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #f0f2f5;
+}
+
+section div.tabla {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 35px;
+    /* background-color: #f0f2f5; */
+}
+
+/* Tabla */
+section div.tabla table {
+   width: 1100px;
+   padding: 50px;
+   margin: 0 50px;
+   border-collapse: separate;
+   border-spacing: 5px;
+   border: 1px solid #0e87fd;
+   border-radius: 15px;
+   box-shadow: 0 0 20px #0e17223d;
+   background: #ffffff;
+   transition: all .3s;
+}
+
+section div.tabla table tr th {
+   height: 50px;
+   font-size: 17px;
+   border-bottom: 1px solid #0086FF ;
+   padding: 0 5px 15px 5px;
+   /* text-transform: uppercase; */
+}
+
+/* 
+section div.tabla table tr {
+   transition: all .3s;
+}
+
+section div.tabla table tr:hover:not(:first-child) {
+   background-color:#f0f2f5 ;
+}
+*/
+
+section div.tabla table tr td {
+   height: 45px;
+   font-size: 15px;
+   text-align: center;
+   border-radius: 5px;
+   padding: 15px 5px;
+   transition: all .3s;
+}
+
+section div.tabla table tr td.td_btns {
+    width: 80px;
+}
+
+section div.tabla table tr td:hover:not(:last-child) {
+    background-color: #f0f2f5;
+}
+
+section div.tabla table tr td a:active {
+    transition: scale .2s ease;
+    scale: 0.93;
+}
+
+section div.tabla table tr td a.modifybtn,
+section div.tabla table tr td a.deletebtn {
+    display: inline-block;
+    height: 26px;
+    width: 26px;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 2px 0px;
+    transition: all .3s;
+}
+
+section div.tabla table tr td a.modifybtn {
+    background-color: #0e87fd;
+}
+
+section div.tabla table tr td a.modifybtn:hover {
+    background-color: #0e5afd;
+}
+
+section div.tabla table tr td a.deletebtn {
+    background-color: #FF787D;
+}
+
+section div.tabla table tr td a.deletebtn:hover {
+    background-color: #ff3d43;
+}
+
+/* Nav bar */
+nav {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #ffffff;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 0 20px #0e17223d;
+    z-index: 1000;
+}
+
+/* CEO */
+nav a.ceo {
+   position: absolute;
+   display: flex;
+   align-items: center;
+   padding: 10px 40px;
+}
+
+nav a.ceo img.logohealthby {
+   height: 40px;
+}
+
+nav a.ceo img.tituhealthby {
+   height: 25px;
+   margin-top: 6px;
+} 
+
+/* Menu horizontal */
+nav ul.men_hor {
+   float: right;
+   margin-right: 40px;
+}
+
+nav ul.men_hor li {
+   display: inline-block;
+   line-height: 60px;
+   margin: 0 5px;
+}
+
+nav ul.men_hor li a {
+   font-size: 14px;
+   color: black;
+   padding: 7px 10px;
+   border-radius: 5px;
+   /* text-transform: uppercase; */
+   transition: all .3s ease;
+}
+
+nav ul.men_hor li a.active, 
+nav ul.men_hor li a:hover {
+   background: #f0f2f5;
+}
+
+nav ul.men_hor li a i#menu {
+   transition: all .2s; 
+}
+
+nav ul.men_hor li a:hover > i#menu {
+   transform: translateY(2px);
+}
+
+/* Sign off */
+nav ul.men_hor li a.signoff {
+   border: 1px solid #0086FF ;
+   color: #0086FF;
+   transition: all .3s ease;
+}
+
+nav ul.men_hor li a.signoff:hover {
+   background: #FF787D;
+   border: 1px solid #FF787D ;
+   color: white;
+}
+
+/* Animación botón Signoff */
+nav ul.men_hor li.animationscl {
+   transition: scale 0.2s ease;
+}
+
+nav ul.men_hor li.animationscl:hover {
+   /* opacity: 85%; */
+   scale: 1.1;
+}
+
+nav ul.men_hor li.animationscl:active {
+   scale: 0.95;
+}
+
+/* Profile */
+nav ul.men_hor li a.profile {
+   background: linear-gradient(90deg, #0086FF, #FF787D);
+   padding: 8px 11px;
+   color: white;
+   transition: all .3s ease;
+}
+
+nav ul.men_hor li a.profile:hover {
+   opacity: 80%;
+}
+
+/* Menu vertical */
+@keyframes  opacidadTrs {
+   from {
+   opacity: 0; 
+   }
+   to {
+   opacity: 1;
+   }
+}
+
+nav ul.men_hor li ul.men_ver {
+   background: white;
+   border: 1px solid #0e87fd;
+   border-radius: 5px;
+   box-shadow: 0px 10px 20px 0px #0e17223d;
+   position: absolute;
+   justify-content: center;
+   flex-direction: column;
+   cursor: pointer;
+   display: none;
+   align-items: center;
+   margin: 0;
+   animation: opacidadTrs .2s ease-in-out;
+}
+
+nav ul.men_hor li ul.men_ver li a:hover { 
+   background: #f0f2f5;
+}
+
+nav ul.men_hor li ul.men_ver li:not(:last-child) {
+  border-bottom: 1px solid #0e87fd;
+}
+
+nav ul.men_hor li ul.men_ver li.dif_men {
+   border-bottom: 1px solid #FF787D;
+}
+
+nav ul.men_hor li:hover > ul.men_ver {
+   display: flex;
+}
+
+/* Menu desplegable / hamburguesa */
+.checkbtn {
+   font-size: 30px;
+   color: black;
+   float: right;
+   line-height: 60px;
+   margin-right: 30px;
+   cursor: pointer;
+   display: none;
+   transition: all .3s ease;
+}
+
+#check:checked ~ .checkbtn {
+   rotate: 270deg;
+}
+
+#check {
+   display: none;
+}
+
+/* Renponsive */
+@media (max-width: 1200px) {
+
+   nav a.ceo {
+       padding-left: 20px;
+   }
+
+   nav ul.men_hor {
+       margin-right: 20px;
+   }
+
+   nav ul.men_hor li a {
+       font-size: 12px;
+   }
+}
+
+@media (max-width: 1100px) {
+
+   .checkbtn {
+       display: block;
+   }
+
+   nav ul.men_hor {
+       position: fixed;
+       width: 100%;
+       height: calc(100vh - 60px);
+       margin: 0;
+       background: #f0f2f5;
+       top: 60px;
+       left: -100%;
+       text-align: center;
+       overflow:auto;
+       scrollbar-width: none;
+       transition: all .3s;
+   }
+
+   #check:checked ~ ul.men_hor {
+       left: 0;
+   }
+
+   nav ul.men_hor li {
+       display: block;
+       margin: 15px 0px;
+   }
+
+   nav ul.men_hor li a {
+       font-size: 20px;
+   }
+
+   nav ul.men_hor li ul.men_ver li a {
+       color: white;
+       background: #FF787D;
+   }
+
+   nav ul.men_hor li a.active, 
+   nav ul.men_hor li ul.men_ver li a.active,
+   nav ul.men_hor li a:hover:not(.profile, .signoff),
+   nav ul.men_hor li ul.men_ver li a:hover {
+       background: #0086FF ; 
+       color: white ;
+   }
+
+   nav ul.men_hor li:hover > ul.men_ver {
+       display: none;
+       box-shadow: none;
+   }
+
+   nav ul.men_hor li:focus-within > ul.men_ver {
+       display: contents;
+   }
+
+   nav ul.men_hor li ul.men_ver li:not(:last-child) {
+       border-bottom: none;
+   }  
+
+   nav ul.men_ver li a {
+       animation: opacidadTrs .3s ease-in-out; 
+   }
+
+   nav ul.men_hor li a:hover > i#menu {
+       transform: translateY(0);
+       rotate: 90deg;
+   }
+}
+
+@media (max-width: 1000px) {
+   
+   section div.tabla table {
+       /* height: 510px; */
+       /* width: 700px; */
+       padding: 40px;
+       margin: 0 40px;
+   }
+   
+   section div.tabla table tr th {
+       font-size: 15px;
+   }
+
+   section div.tabla table tr td {
+       font-size: 13px;
+   }
+
+   section div.tabla table tr td.td_btns {
+    width: 70px;
+}
+
+section div.tabla table tr td a.modifybtn,
+section div.tabla table tr td a.deletebtn {
+    height: 23px;
+    width: 23px;
+    font-size: 14px;
+}
+}
+
+@media (max-width: 670px) {
+
+    section div.tabla {
+        justify-content: flex-start;
+        scrollbar-width: thin;
+        overflow-x: auto;
+    }
+
+    /* Tabla */
+    section div.tabla table {
+        /* height: 505px; */
+        /* width: 300px; */
+        /* margin-top: 17px; */
+        min-width: 570px;
+        padding: 30px;    
+        margin: 10px 30px 0 30px ;
+        /* margin-top: 0; */
+    }
+
+    section div.tabla table tr th {
+        font-size: 13px;
+
+    }
+
+    section div.tabla table tr td {
+        font-size: 12px;
+    }
+
+    section div.tabla table tr td.td_btns {
+        width: 65px;
+    }
+
+    section div.tabla table tr td a.modifybtn,
+    section div.tabla table tr td a.deletebtn {
+        height: 21px;
+        width: 21px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 300px) {
+
+   section div.tabla table {
+       margin: 10px 20px 0 20px ;
+   }
+}

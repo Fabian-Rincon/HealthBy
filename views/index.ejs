@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthBy</title>
+    <link rel="icon" href="../icon/HealthBy Logo.ico" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <a href="/" class="ceo">
+            <img class="logohealthby" src="/icon/HealthBy Logo.ico" alt="HealthBy">
+            <img class="tituhealthby" src="/img/Tit_HealthBy.png" alt="HealthBy">
+        </a>
+
+        <ul class="men_hor">
+            <li><a href="/" class="active">Inicio</a></li>
+            <li><a href="#municipios">Municipios <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="pages/login">Añadir</a></li>
+                    <li><a href="pages/login">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#sedes">Sedes <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="pages/login">Añadir</a></li>
+                    <li><a href="pages/login">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#trabajadores">Trabajadores <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="pages/login">Añadir</a></li>
+                    <li class="dif_men"><a href="pages/login">Modificar</a></li>
+                    <li><a href="pages/login">Añd. Cat. Lab.</a></li>
+                    <li class="dif_men"><a href="pages/login">Mod. Cat. Lab.</a></li>
+                    <li><a href="pages/login">Añd. Espec.</a></li>
+                    <li><a href="pages/login">Mod. Espec.</a></li>
+                </ul>
+            </li>
+            <li><a href="#pacientes">Pacientes <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="pages/login">Añadir</a></li>
+                    <li><a href="pages/login">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#citasmedicas">Citas Médicas <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="pages/login">Añadir</a></li>
+                    <li><a href="pages/login">Modificar</a></li>
+                </ul>
+            </li>
+            <li class="animationscl"><a class="login" href="pages/login">Iniciar sesión</a></li>
+            <li class="animationscl"><a class="signup" href="pages/register">Registrarse</a></li>
+        </ul>
+        
+    </nav>
+    <section>
+        <div class="imghealthby">
+            <img src="img/HealthBy_logo.png" class="image" alt="HealthBy" title="HealthBy"/>
+            <% if (typeof msg !== "undefined") { %>
+                <h3 style="text-align: center;"><strong><%= msg %></strong></h3>
+            <% } %>
+        </div>
+    </section>
+</body>
+</html>

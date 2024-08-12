@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthBy - Añadir municipio</title>
+    <link rel="icon" href="../../icon/HealthBy Logo.ico" />
+    <link rel="stylesheet" href="../../css/add_municipality.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <a href="../home" class="ceo">
+            <img class="logohealthby" src="../../icon/HealthBy Logo.ico" alt="HealthBy">
+            <img class="tituhealthby" src="../../img/Tit_HealthBy.png" alt="HealthBy">
+        </a>
+
+        <ul class="men_hor">
+            <li><a href="../home">Inicio</a></li>
+            <li><a href="#municipios"class="active">Municipios <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a class="active" href="../municipalities/add_municipality">Añadir</a></li>
+                    <li><a href="../municipalities/mod_municipality">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#sedes">Sedes <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../headquarters/add_headquarters">Añadir</a></li>
+                    <li><a href="../headquarters/mod_headquarters">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#trabajadores">Trabajadores <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../workers/add_worker">Añadir</a></li>
+                    <li class="dif_men"><a href="../workers/mod_worker">Modificar</a></li>
+                    <li><a href="../laboral_category_workers/add_lab_cat">Añd. Cat. Lab.</a></li>
+                    <li class="dif_men"><a href="../laboral_category_workers/mod_lab_cat">Mod. Cat. Lab.</a></li>
+                    <li><a href="../speciality_workers/add_spe_work">Añd. Espec.</a></li>
+                    <li><a href="../speciality_workers/mod_spe_work">Mod. Espec.</a></li>
+                </ul>
+            </li>
+            <li><a href="#pacientes">Pacientes <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../patients/add_patient">Añadir</a></li>
+                    <li><a href="../patients/mod_patient">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#citasmedicas">Citas Médicas <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../medical_appoint/add_med_app">Añadir</a></li>
+                    <li><a href="../medical_appoint/mod_med_app">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a class="profile" href="#mi perfil">Mi perfil <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../account/edit_data">Modificar datos</a></li>
+                    <li><a href="../account/mod_password">Cambiar contraseña</a></li>
+                </ul>
+            </li>
+            <li class="animationscl"><a class="signoff" href="../login">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="formulario">
+            <form action="/save_municipios" method="POST">
+                <h2>Añadir Municipio</h2>
+            
+                <!-- Info del municipio -->
+
+                <label class="labform" for="cod_mun"> Código del municipio </label>
+                    <input type="number" id="cod_mun" name="cod_mun" placeholder="MP100" readonly>
+            
+                <label class="labform" for="nom_mun">Nombre del municipio</label>
+                    <input type="text" id="nom_mun" name="nom_mun" required>
+            
+                <label class="labform" for="num_afi_mun">Número de afiliados</label>
+                    <input type="number" id="num_afi_mun" name="num_afi_mun" required>
+            
+                <label class="labform" for="fk_nom_dep"> Departamento al que pertenece </label>
+                    <select name="fk_nom_dep" id="fk_nom_dep" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="cundinamarca">Cundinamarca</option>
+                    </select>
+            
+                <!-- Botón Original -->
+                <input type="submit" value="Añadir municipio" class="add_municipalitybtn">
+            
+                <!-- Botón Remplazo -->
+                <!-- <a href="" class="add_municipality">Añadir municipio</a> -->
+            </form>
+        </div>
+    </section>
+</body>
+</html>

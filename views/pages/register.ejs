@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthBy - Regístrate</title>
+    <link rel="icon" href="../icon/HealthBy Logo.ico" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <a href="/" class="ceo">
+            <img class="logohealthby" src="../icon/HealthBy Logo.ico" alt="HealthBy">
+            <img class="tituhealthby" src="../img/Tit_HealthBy.png" alt="HealthBy">
+        </a>
+
+        <ul class="men_hor">
+            <li class="animationscl"><a class="login" href="../pages/login">Iniciar sesión</a></li>
+            <li class="animationscl"><a class="signup" href="../pages/register">Registrarse</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="formulario">
+            <img src="../img/HealthBy_logo.png" class="image" alt="HealthBy" title="HealthBy"/>
+
+            <form action="/pages/register" method="post">
+                <h2>Regístrate</h2>
+                <% if(typeof msg != "undefined"){ %>
+                    <p style="text-align: center;">
+                        <%= msg %>
+                    </p>
+                <% } %>
+                <label class="labform" for="num_doc_adm"> N° Documento de Identidad </label>
+                <input type="number" name="num_doc_adm" id="num_doc_adm" required>
+                
+                <label class="labform" for="nom_adm"> Nombre(s)</label>
+                <input type="text" name="nom_adm" id="nom_adm" required />
+                
+                <label class="labform" for="ape_adm"> Apellido(s) </label>
+                <input type="text" name="ape_adm" id="ape_adm" required />
+                
+                <label class="labform" for="cor_ele_adm"> Correo electrónico </label>
+                <input type="email" name="cor_ele_adm" id="cor_ele_adm" required />
+                
+                <label class="labform" for="cont_adm"> Contraseña </label>
+                <input type="password" name="cont_adm" id="cont_adm" required />
+                <br>
+                <!-- Botón Original -->
+                <input type="submit" value="Regístrate" class="registerbtn">
+                
+                <!-- Botón Remplazo -->
+                <!-- <a href="../pages/login" class="registerbtn">Regístrate</a> -->
+                
+                <div class="logintxt">
+                    <p class="l1">¿Ya tienes una cuenta?</p>
+                    <p class="l2">
+                        <a href="../pages/login"> Inicia sesión </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

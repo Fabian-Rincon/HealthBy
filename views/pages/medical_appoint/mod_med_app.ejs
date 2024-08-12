@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthBy - Modificar citas médicas</title>
+    <link rel="icon" href="../../icon/HealthBy Logo.ico" />
+    <link rel="stylesheet" href="../../css/mod_med_app.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <a href="../home" class="ceo">
+            <img class="logohealthby" src="../../icon/HealthBy Logo.ico" alt="HealthBy">
+            <img class="tituhealthby" src="../../img/Tit_HealthBy.png" alt="HealthBy">
+        </a>
+
+        <ul class="men_hor">
+            <li><a href="../home">Inicio</a></li>
+            <li><a href="#municipios">Municipios <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../municipalities/add_municipality">Añadir</a></li>
+                    <li><a href="../municipalities/mod_municipality">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#sedes">Sedes <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../headquarters/add_headquarters">Añadir</a></li>
+                    <li><a href="../headquarters/mod_headquarters">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#trabajadores">Trabajadores <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../workers/add_worker">Añadir</a></li>
+                    <li class="dif_men"><a href="../workers/mod_worker">Modificar</a></li>
+                    <li><a href="../laboral_category_workers/add_lab_cat">Añd. Cat. Lab.</a></li>
+                    <li class="dif_men"><a href="../laboral_category_workers/mod_lab_cat">Mod. Cat. Lab.</a></li>
+                    <li><a href="../speciality_workers/add_spe_work">Añd. Espec.</a></li>
+                    <li><a href="../speciality_workers/mod_spe_work">Mod. Espec.</a></li>
+                </ul>
+            </li>
+            <li><a href="#pacientes">Pacientes <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../patients/add_patient">Añadir</a></li>
+                    <li><a href="../patients/mod_patient">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a href="#citasmedicas" class="active">Citas Médicas <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../medical_appoint/add_med_app">Añadir</a></li>
+                    <li><a class="active" href="../medical_appoint/mod_med_app">Modificar</a></li>
+                </ul>
+            </li>
+            <li><a class="profile" href="#mi perfil">Mi perfil <i id="menu" class="fa-solid fa-angle-down"></i></a>
+                <ul class="men_ver">
+                    <li><a href="../account/edit_data">Modificar datos</a></li>
+                    <li><a href="../account/mod_password">Cambiar contraseña</a></li>
+                </ul>
+            </li>
+            <li class="animationscl"><a class="signoff" href="../login">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cód. de la Cita Médica</th>
+                        <th>Especialista</th>
+                        <th>Fecha y Hora de la Cita Médica</th>
+                        <th>Motivo de la Cita Médica</th>
+                        <th>Nom. del Paciente</th>
+                        <th>N° Doc. del Paciente</th>
+                        <th>Tel. del Paciente</th>
+                        <th>Email del Paciente</th>
+                        <!-- <th></th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <% results.forEach((citas_medicas)=> { %>
+                        <tr>
+                            <td><%= citas_medicas.cod_cit_med %></td><!-- Cód. de la Cita -->
+                            <td><%= citas_medicas.esp_cit_med %></td><!-- Especialista -->
+                            <td><%= citas_medicas.fyh_cit_med %></td><!-- Fec. y Hora de la Cita -->
+                            <td><%= citas_medicas.mot_cit_med %></td><!-- Mot. de la Cita -->
+                            <td><%= citas_medicas.nom_pac_cit_med %></td><!-- Nom. del Paciente -->
+                            <td><%= citas_medicas.fk_num_doc_pac %></td><!-- N° Doc. del Paciente -->
+                            <td><%= citas_medicas.tel_cit_med %></td><!-- Tel. del Paciente -->
+                            <td><%= citas_medicas.cor_ele_cit_med %></td><!-- Email del Paciente -->
+                            <td class="td_btns">
+                                <a class="modifybtn" title="Editar información" href="edit_med_app<%= citas_medicas.cod_cit_med %>"><i class="fa-regular fa-pen-to-square"></i></a>
+                                <a class="deletebtn" title="Eliminar información" href="delete_med_app<%= citas_medicas.cod_cit_med %>"><i class="fa-solid fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>
