@@ -4,8 +4,7 @@ const router = express.Router();
 
 const conexion = require("./database/db")
 
-// res.render para cargar archivos ejs 
-// ruta index page o pagina principal
+// ruta index page o pagina principal, res.render para cargar archivos ejs 
 router.get('/', (req,res)=>{
     res.render('index');
 });
@@ -14,13 +13,13 @@ router.get('/pages/home', (req, res)=>{
     res.render('pages/home');
 });
 router.get('/pages/login', (req, res)=>{
-    res.render('pages/login');
+    res.render('pages/login', {msg:'!Ya Puedes Iniciar Sesión¡'});
 });
 router.get('/pages/recovery', (req, res)=>{
     res.render('pages/recovery');
 });
 router.get('/pages/register', (req, res)=>{
-    res.render('pages/register');
+    res.render('pages/register', {msg:'!Usuario ya Existe¡'});
 });
 
 router.get('/pages/account/edit_data', (req, res)=>{
@@ -57,7 +56,7 @@ router.get('/pages/municipalities/mod_municipality', (req, res)=>{
         }else{
             res.render('pages/municipalities/mod_municipality', {results:results});
         }
-    });
+    })
 });
 // Eliminar registros
 router.get('/pages/municipalities/delete_municipality:cod_mun', (req, res)=>{
