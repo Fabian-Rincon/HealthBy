@@ -54,7 +54,8 @@ section div.formulario form {
     flex-direction: column;
     justify-content: center;
     width: 400px;
-    height: 880px;
+    min-height: 785px;
+    max-height: 830px;
     padding: 50px;
     border-radius: 15px;
     border: 1px solid #0e87fd;
@@ -137,11 +138,17 @@ section div.formulario form input.registerbtn:active {
 
 section div.formulario form div.logintxt {
     text-align: center;
+    margin-top: 10px;
+}
+
+section div.formulario form div.logintxt p.msg {
+    color: #ff3239;
+    margin-top: 10px;
 }
 
 section div.formulario form div.logintxt p.l1 {
     font-size: 17px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 section div.formulario form div.logintxt p.l2 {
@@ -292,7 +299,8 @@ nav ul.men_hor li.animationscl:active {
 
     section div.formulario form {
         width: 350px;
-        height: 825px;
+        min-height: 750px;
+        max-height: 795px;
         padding: 45px;
     }
 
@@ -322,7 +330,7 @@ nav ul.men_hor li.animationscl:active {
 
     section div.formulario form div.logintxt p.l1 {
         font-size: 15px;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     
     section div.formulario form div.logintxt p.l2 {
@@ -378,7 +386,8 @@ nav ul.men_hor li.animationscl:active {
     /* Formulario */
     section div.formulario form {
         width: 300px;
-        height: 700px;
+        min-height: 635px;
+        max-height: 680px;
         padding: 40px;
     }
 
@@ -408,7 +417,7 @@ nav ul.men_hor li.animationscl:active {
 
     section div.formulario form div.logintxt p.l1 {
         font-size: 13px;
-        margin-top: 15px;
+        margin-top: 10px;
     }
     
     section div.formulario form div.logintxt p.l2 {

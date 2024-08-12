@@ -35,11 +35,7 @@
 
             <form action="/pages/register" method="post">
                 <h2>Regístrate</h2>
-                <% if(typeof msg != "undefined"){ %>
-                    <p style="text-align: center;">
-                        <%= msg %>
-                    </p>
-                <% } %>
+               
                 <label class="labform" for="num_doc_adm"> N° Documento de Identidad </label>
                 <input type="number" name="num_doc_adm" id="num_doc_adm" required>
                 
@@ -54,7 +50,7 @@
                 
                 <label class="labform" for="cont_adm"> Contraseña </label>
                 <input type="password" name="cont_adm" id="cont_adm" required />
-                <br>
+                
                 <!-- Botón Original -->
                 <input type="submit" value="Regístrate" class="registerbtn">
                 
@@ -62,6 +58,11 @@
                 <!-- <a href="../pages/login" class="registerbtn">Regístrate</a> -->
                 
                 <div class="logintxt">
+                    <% if(typeof msg != "undefined"){ %>
+                        <p class="msg">
+                            <%= msg %>
+                        </p>
+                    <% } %>
                     <p class="l1">¿Ya tienes una cuenta?</p>
                     <p class="l2">
                         <a href="../pages/login"> Inicia sesión </a>

@@ -22,21 +22,27 @@ section {
     background-color: #f0f2f5;
 }
 
-section div.imghealthby {
+@font-face {
+    font-family: "Harlow Family";
+    src: url(../fonts/HARLOWSI.TTF);
+}
+
+section div.addhealthby {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
     border-radius: 15px;
-    top: 30px;
+    cursor: pointer;
     /* margin-bottom: 35px; */
     /* background-color: #f0f2f5; */
 }
 
-section div.imghealthby img.image {
+section div.addhealthby img.image {
     width: 350px;
     height: 350px;
+    margin: 20px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 20px #0e17223d;
@@ -44,8 +50,40 @@ section div.imghealthby img.image {
     transition: all 0.2s ease;
 }
 
-section div.imghealthby img.image:active {
+section div.addhealthby img.image:active {
     scale: 0.97;
+}
+
+section div.addhealthby div.box_msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    padding: 15px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 17px;
+    box-shadow: 0 0 20px #0e17223d;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+section div.addhealthby div.box_msg:active {
+    scale: 0.97;
+}
+
+section div.addhealthby div.box_msg p.msg {
+    height: auto;
+    width: 345px;
+    font-family: "Harlow Family", sans-serif;
+    font-size: 48px;
+    text-align: center;
+    color: transparent;
+    background: linear-gradient(90deg, #0086FF, #FF787D);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 0.2s ease;
 }
 
 /* Nav bar */
@@ -297,30 +335,81 @@ nav ul.men_hor li:hover > ul.men_ver {
         rotate: 90deg;
     }
 
-    section div.imghealthby img.image {
+    section div.addhealthby img.image {
         width: 300px;
         height: 300px;
+    }
+
+    section div.addhealthby div.box_msg {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    section div.addhealthby div.box_msg p.msg {
+        height: auto;
+        width: 310px;
+        font-size: 43px;
     }
 }
 
 @media (max-width: 900px) {
 
-    section div.imghealthby img.image {
+    section div.addhealthby img.image {
         width: 250px;
         height: 250px;
+    }
+
+    section div.addhealthby div.box_msg {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    section div.addhealthby div.box_msg p.msg {
+        height: auto;
+        width: 250px;
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 740px) {
+
+    section div.addhealthby {
+        flex-direction: column;
     }
 }
 
 @media (max-width: 600px) {
     /* Formulario */
-    section div.imghealthby img.image {
+    section div.addhealthby img.image {
         width: 200px;
         height: 200px;
+    }
+
+    section div.addhealthby div.box_msg {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    section div.addhealthby div.box_msg p.msg {
+        height: auto;
+        width: 220px;
+        font-size: 30px;
     }
 }
 
 @media (max-width: 300px) {
-    section div.imghealthby img.image {
+
+    section div.addhealthby div.box_msg {
+        display: none;
+    }
+}
+
+@media (max-width: 270px) {
+    section div.addhealthby img.image {
         display: none
+    }
+
+    section div.addhealthby div.box_msg {
+        display: none;
     }
 }

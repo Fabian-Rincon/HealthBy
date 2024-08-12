@@ -42,14 +42,14 @@ app.post('/pages/register', async (req, res)=>{
             throw error;
         }else{
             if(results.length>0){
-                res.render('pages/register', {msg:'!No se Pudo Registrar, Usuario ya Existe¡'});
+                res.render('pages/register', {msg:'No fue posible Registrarte en HealthBy Usuario Existente'});
             }else{
                 let passwordHash = await bcryptjs.hash(cont_adm, 8);
                 conexion.query('INSERT INTO admins SET ?', {num_doc_adm:num_doc_adm, nom_adm:nom_adm, ape_adm:ape_adm, cor_ele_adm:cor_ele_adm, cont_adm:passwordHash}, async(error, results)=>{
                     if(error){
                         console.log(error);
                     }else{
-                        res.render('pages/register', {msg:'!Registro Exitoso¡, Inicia Sesion'});
+                        res.render('pages/register', {msg:'Registro en HealthBy Exitoso, Ya Puedes Iniciar Sesión'});
                     }
                 });
             }
@@ -65,10 +65,10 @@ app.post('/pages/login', async (req, res)=>{
     if(num_doc_adm && cont_adm){
         conexion.query('SELECT * FROM admins WHERE num_doc_adm = ?', [num_doc_adm], async (error, results)=>{
             if(results.length == 0 || !(await bcryptjs.compare(cont_adm, results[0].cont_adm))){
-                res.render('pages/login', {msg:'!Usuario o Contraseña Incorrecta¡'});
+                res.render('pages/login', {msg:'Usuario o Contraseña Incorrectos'});
             }else{
                 req.session.loggedin = true;
-                res.render('pages/home', {msg: 'Su Usuario Esta Conectado'});
+                res.render('pages/home', {msg: 'Su Usuario Está Conectado. :)'});
             }
         });
     }
@@ -80,12 +80,12 @@ app.get('/', (req, res)=>{
     if (req.session.loggedin){
         res.render('pages/home', {
             login: true,
-            msg: 'Su Usuario Esta Conectado'
+            msg: 'Su Usuario Esta Conectado. :)'
         });
     }else{
         res.render('index', {
             login: false,
-            msg: 'Debe iniciar Sesion'
+            msg: 'Debes Iniciar Sesión'
         });
     }
 });

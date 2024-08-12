@@ -35,11 +35,7 @@
                 
                 <form action="/pages/login" method="post">
                     <h2>Iniciar Sesión</h2>
-                    <% if(typeof msg != "undefined"){ %>
-                        <p style="text-align: center;">
-                            <%= msg %>
-                        </p>
-                    <% } %>
+                    
                     <label class="labform" for="num_doc_adm"> N° Documento de Identidad </label>
                     <input type="number" name="num_doc_adm" id="num_doc_adm" required />
 
@@ -47,6 +43,11 @@
                     <input type="password" name="cont_adm" id="cont_adm" required />
                     
                     <div class="remember">
+                        <% if(typeof msg != "undefined"){ %>
+                            <p class="msg">
+                                <%= msg %>
+                            </p>
+                        <% } %>
                         <p>
                             <a href="recovery"> ¿Olvidaste tu contaseña? </a>
                         </p>

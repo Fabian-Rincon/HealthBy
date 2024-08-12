@@ -71,10 +71,12 @@
     </nav>
 
     <section>
-        <div class="imghealthby">
+        <div class="addhealthby">
             <img src="../img/HealthBy_logo.png" class="image" alt="HealthBy" title="HealthBy"/>
             <% if (typeof msg !== "undefined") { %>
-                <h3 style="text-align: center;"><strong><%= msg %></strong></h3>
+                <div class="box_msg">
+                    <p class="msg"><%= msg %></p>
+                </div>
             <% } %>
     </section>
 </body>

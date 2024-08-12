@@ -54,8 +54,8 @@ section div.formulario form {
     flex-direction: column;
     justify-content: center;
     width: 400px;
-    height: 535px;
-    padding: 50px;
+    min-height: 540px;
+    max-height: 570px ;    padding: 50px;
     border-radius: 15px;
     border: 1px solid #0e87fd;
     box-shadow: 0 0 20px #0e17223d;
@@ -91,7 +91,15 @@ section div.formulario form input:focus {
 section div.formulario form div.remember {
     font-size: 17px;
     text-align: center;
-    padding: 20px 0 20px 0;
+    padding: 10px 0 20px 0;
+}
+
+section div.formulario form div.remember p {
+    margin-top: 10px;
+}
+
+section div.formulario form div.remember p.msg {
+    color: #ff3239;
 }
 
 /* Login botón */
@@ -272,7 +280,8 @@ nav ul.men_hor li.animationscl:active {
 
     section div.formulario form {
         width: 350px;
-        height: 500px;
+        min-height: 505px;
+        max-height: 530px;
         padding: 45px;
     }
 
@@ -293,7 +302,7 @@ nav ul.men_hor li.animationscl:active {
 
     section div.formulario form div.remember {
         font-size: 15px;
-        padding: 20px 0 20px 0;
+        padding: 10px 0 20px 0;
     }
 
     section div.formulario form input.loginbtn {
@@ -359,7 +368,8 @@ nav ul.men_hor li.animationscl:active {
     /* Formulario */
     section div.formulario form {
         width: 300px;
-        height: 420px;
+        min-height: 425px;
+        max-height: 450px;
         padding: 40px;
     }
 
@@ -380,7 +390,7 @@ nav ul.men_hor li.animationscl:active {
 
     section div.formulario form div.remember {
         font-size: 13px;
-        padding: 15px 0 15px 0;
+        padding: 5px 0 15px 0;
     }
 
     section div.formulario form input.loginbtn {
