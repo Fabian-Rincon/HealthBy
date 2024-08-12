@@ -144,5 +144,5 @@ num_doc_adm varchar(15) primary key not null unique,
 nom_adm varchar(50) not null,
 ape_adm varchar(50) not null,
 cor_ele_adm varchar(50) not null,
-cont_adm varchar(50) not null
+cont_adm varchar(255) not null
 );
