@@ -33,14 +33,19 @@
                 <img
                 src="../img/HealthBy_logo.png" class="image" alt="HealthBy" title="HealthBy"/>
                 
-                <form action="/log_usu" method="post">
+                <form action="/pages/login" method="post">
                     <h2>Iniciar Sesión</h2>
-                    <div style="text-align: center;"><%= msg %></div>
-                    <label class="labform" for="email"> Correo electrónico </label>
-                        <input type="email" name="cor_ele_pac" id="email" required />
-                    <label class="labform" for="password"> Contraseña </label>
-                        <input type="password" name="cont_pac" id="password" required />
+                    <% if(typeof msg != "undefined"){ %>
+                        <p style="text-align: center;">
+                            <%= msg %>
+                        </p>
+                    <% } %>
+                    <label class="labform" for="num_doc_adm"> N° Documento de Identidad </label>
+                    <input type="number" name="num_doc_adm" id="num_doc_adm" required />
 
+                    <label class="labform" for="cont_adm"> Contraseña </label>
+                    <input type="password" name="cont_adm" id="cont_adm" required />
+                    
                     <div class="remember">
                         <p>
                             <a href="recovery"> ¿Olvidaste tu contaseña? </a>
@@ -48,7 +53,7 @@
                     </div>
 
                     <!-- Botón Original -->
-                    <input type="submit" value="Iniciar sesión" class="loginbtn" formaction="home">
+                    <input type="submit" value="Iniciar sesión" class="loginbtn">
 
                     <!-- Botón Remplazo -->
                     <!-- <a href="home" class="loginbtn">Iniciar sesión</a> -->

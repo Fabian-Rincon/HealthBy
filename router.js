@@ -4,26 +4,35 @@ const router = express.Router();
 
 const conexion = require("./database/db")
 
-// ruta index page o pagina principal, res.render para cargar archivos ejs 
-router.get('/', (req,res)=>{
-    res.render('index');
-});
-// rutas a otras paginas
+// rutas a otras paginas, res.render para cargar archivos ejs 
+
 router.get('/pages/home', (req, res)=>{
     res.render('pages/home');
 });
 router.get('/pages/login', (req, res)=>{
-    res.render('pages/login', {msg:'!Ya Puedes Iniciar Sesión¡'});
+    res.render('pages/login');
 });
 router.get('/pages/recovery', (req, res)=>{
     res.render('pages/recovery');
 });
 router.get('/pages/register', (req, res)=>{
-    res.render('pages/register', {msg:'!Usuario ya Existe¡'});
+    res.render('pages/register');
 });
 
+/* ----------Account---------- */
+// Editar registros
 router.get('/pages/account/edit_data', (req, res)=>{
     res.render('pages/account/edit_data');
+});
+router.get('/pages/account/edit_data:num_doc_adm', (req, res)=>{
+    const num_doc_adm = req.params.num_doc_adm;
+    conexion.query("SELECT * FROM admins WHERE num_doc_adm = ?",[num_doc_adm], (error, results)=>{
+        if(error){
+            throw error;
+        }else{
+            res.render('pages/account/edit_data', {admin:results[0]});
+        }
+    })
 });
 router.get('/pages/account/mod_password', (req, res)=>{
     res.render('pages/account/mod_password');
@@ -301,6 +310,8 @@ router.get('/pages/medical_appoint/delete_med_app:cod_cit_med', (req, res)=>{
 
 /* ----------controladores del crud---------- */
 const crud = require('./controllers/crud');
+// Account
+router.post('/update_account', crud.update_account);
 
 // Municipios
 router.post('/save_municipios', crud.save_municipios);

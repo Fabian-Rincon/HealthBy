@@ -248,24 +248,18 @@ exports.update_citas_medicas = (req, res)=>{
 };
 
 /* ----------Sección Cuenta----------  */
-/* // Editar informacion
-exports.update_pacientes = (req, res)=>{
-    const nom_pac = req.body.nom_pac;
-    const ape_pac = req.body.ape_pac;
-    const num_doc_pac = req.body.num_doc_pac;
-    const fec_nac_pac = req.body.fec_nac_pac;
-    const gen_pac = req.body.gen_pac;
-    const dir_pac = req.body.dir_pac;
-    const tel_pac = req.body.tel_pac;
-    const cor_ele_pac = req.body.cor_ele_pac;
-    const fec_afi_pac = req.body.fec_afi_pac;
+// Editar informacion
+exports.update_account = (req, res)=>{
+    const num_doc_adm = req.body.num_doc_adm;
+    const nom_adm = req.body.nom_adm;
+    const ape_adm = req.body.ape_adm;
+    const cor_ele_adm = req.body.cor_ele_adm;
 
-    conexion.query('UPDATE pacientes SET ? WHERE num_doc_pac = ?',[{nom_pac:nom_pac, ape_pac:ape_pac, fec_nac_pac:fec_nac_pac, gen_pac:gen_pac, dir_pac:dir_pac, tel_pac:tel_pac, cor_ele_pac:cor_ele_pac, fec_afi_pac:fec_afi_pac},num_doc_pac], (error,results)=>{
+    conexion.query('UPDATE admins SET ? WHERE num_doc_adm = ?',[{nom_adm:nom_adm, ape_adm:ape_adm, cor_ele_adm:cor_ele_adm}, num_doc_adm], (error,results)=>{
         if(error){
             console.error(error);
         }else{
-            res.redirect('pages/patients/mod_patient');
+            res.redirect('pages/account/edit_data', {msg:'!Usuario Editado con Exito¡'});
         }
     })
 };
- */
