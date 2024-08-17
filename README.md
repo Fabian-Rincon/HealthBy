@@ -9,7 +9,7 @@
 <h2 align= "center" > Instrucciones para Inicializar el Proyecto HealthBy </h2>
 <p> 
 1. Abra la carpeta del proyecto llamada "HealthBy" con su editor de código favorito. <br>
-2. Dirijase a la carpeta "additional_files_HealthBy", luego a la carpeta additional_files_HealthBy y copie el código SQL de la DB "healthby" o si prefiere dirijase al archivo HealthBy.sql dentro de la carpeta descomprimida del proyecto e igualmente copie el código SQL.<br>
+2. Dirijase a la carpeta "additional_files_HealthBy", luego a la carpeta "database_code_HealthBy" y copie el código SQL de la DB "healthby" o si prefiere dirijase al archivo HealthBy.sql dentro de la carpeta descomprimida del proyecto e igualmente copie el código SQL.<br>
 3. Proceda a ejecutar su entorno de desarrollo local más expecificamente su servidor local como "Laragon", "XAMPP" o el de su preferencia.<br>
 4. Una vez cuente con el SQL del proyecto, prosiga a ejecutar dicho código en su sistema gestor de base de datos preferido como MySQL Workbench, HeidiSQL o parecido a fin crear la base de datos "healthby".<br>
 5. Ya que ha sido creada la DB, dirijase nuevamente a su editor de código preferido.<br>

@@ -17,7 +17,7 @@ num_afi_mun mediumint default null,
 fk_nom_dep varchar(20),
 foreign key(fk_nom_dep) references departamento(nom_dep)
 );
-INSERT INTO `municipios` (`cod_mun`, `nom_mun`, `num_afi_mun`, `fk_nom_dep`) VALUES (NULL, 'Villa de San Diego de Ubaté', '7800', 'Cundinamarca'), (NULL, 'Fusagasugá', '27400', 'Cundinamarca'), (NULL, 'Chía', '25800', 'Cundinamarca');
+INSERT INTO `municipios` (`cod_mun`, `nom_mun`, `num_afi_mun`, `fk_nom_dep`) VALUES (NULL, 'Cajicá', '40000', 'Cundinamarca'), (NULL, 'Fusagasugá', '27400', 'Cundinamarca'), (NULL, 'Chía', '75800', 'Cundinamarca');
 
 create table sedes 
 (
