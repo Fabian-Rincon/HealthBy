@@ -42,7 +42,7 @@ section div.addhealthby {
 section div.addhealthby img.image {
     width: 350px;
     height: 350px;
-    margin: 20px;
+    margin: 80px 20px 20px 20px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 20px #0e17223d;
@@ -61,7 +61,7 @@ section div.addhealthby div.box_msg {
     height: auto;
     width: auto;
     padding: 15px;
-    margin: 20px;
+    margin: 80px 20px 20px 20px;
     background-color: white;
     border-radius: 17px;
     box-shadow: 0 0 20px #0e17223d;
@@ -342,7 +342,6 @@ nav ul.men_hor li:hover > ul.men_ver {
 
     section div.addhealthby div.box_msg {
         padding: 15px;
-        margin: 20px;
     }
 
     section div.addhealthby div.box_msg p.msg {
@@ -361,7 +360,6 @@ nav ul.men_hor li:hover > ul.men_ver {
 
     section div.addhealthby div.box_msg {
         padding: 15px;
-        margin: 20px;
     }
 
     section div.addhealthby div.box_msg p.msg {
@@ -375,6 +373,11 @@ nav ul.men_hor li:hover > ul.men_ver {
 
     section div.addhealthby {
         flex-direction: column;
+    }
+    
+    section div.addhealthby div.box_msg {
+        padding: 15px;
+        margin: 20px;
     }
 }
 
